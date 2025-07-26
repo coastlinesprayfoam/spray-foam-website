@@ -1,21 +1,43 @@
-// Coastline Spray Foam - Gallery Implementation
-// Professional image gallery with lazy loading and filtering
+/**
+ * Coastline Spray Foam - Gallery Implementation
+ * Professional image gallery with lazy loading and filtering
+ * @version 1.0.0
+ * @author Coastline Spray Foam
+ */
 
+/**
+ * SprayFoamGallery class for managing project gallery
+ * @class
+ */
 class SprayFoamGallery {
+  /**
+   * Create a SprayFoamGallery instance
+   * @constructor
+   */
   constructor() {
     this.images = [];
     this.currentFilter = 'all';
     this.lazyLoadObserver = null;
+    this.isInitialized = false;
     this.init();
   }
 
-  // Initialize gallery
+  /**
+   * Initialize gallery components
+   * @method
+   */
   init() {
-    this.loadImageData();
-    this.setupLazyLoading();
-    this.setupFilterButtons();
-    this.setupLightbox();
-    this.renderGallery();
+    try {
+      this.loadImageData();
+      this.setupLazyLoading();
+      this.setupFilterButtons();
+      this.setupLightbox();
+      this.renderGallery();
+      this.isInitialized = true;
+      console.log('SprayFoamGallery initialized successfully');
+    } catch (error) {
+      console.error('Failed to initialize gallery:', error);
+    }
   }
 
   // Load all image data from the images folder
