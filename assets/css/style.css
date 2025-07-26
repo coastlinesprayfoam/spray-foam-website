@@ -890,18 +890,266 @@ a[href^="tel:"] {
   text-decoration: none;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Layout Fixes and Alignment Improvements */
+
+/* Prevent horizontal overflow and ensure proper alignment */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  position: relative;
+}
+
+/* Fix container alignment and prevent overflow */
+.container {
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ensure proper spacing and prevent overlaps */
+.section {
+  position: relative;
+  z-index: 1;
+  clear: both;
+  width: 100%;
+}
+
+/* Fix hero section alignment and prevent overflow */
+.hero {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 100%;
+  text-align: center;
+}
+
+/* Ensure main content doesn't overlap with fixed navbar */
+main {
+  margin-top: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Fix card alignment and prevent overflow */
+.card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1.5rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Fix button alignment and prevent wrapping issues */
+.btn-group,
+.hero-cta-group,
+.cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Fix gallery grid alignment */
+.gallery-grid {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+/* Fix text overflow and alignment */
+h1, h2, h3, h4, h5, h6 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  max-width: 100%;
+}
+
+p, li, span {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+/* Fix image alignment and prevent overflow */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Fix flex container alignment */
+.d-flex {
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+/* Fix row and column alignment */
+.row {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+
+.row > * {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+/* Responsive breakpoints with proper alignment */
+@media (max-width: 576px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .hero .lead {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-cta-group,
+  .cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .hero-cta-group .btn,
+  .cta-group .btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+
+  .navbar {
+    padding: 0.5rem 0;
+  }
+
+  .navbar-collapse {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+
+  .section-header h2 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
   .hero h1 {
     font-size: 2.5rem;
+    line-height: 1.2;
   }
-  
+
   .hero .lead {
     font-size: 1.25rem;
   }
-  
+
   .section {
     padding: 3rem 0;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Fix navigation alignment on mobile */
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    padding: 0.75rem 1rem;
+    display: block;
+    width: 100%;
+  }
+
+  .navbar .btn-cta {
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 250px;
   }
 }
 
