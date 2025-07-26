@@ -102,6 +102,24 @@
   }
 }
 
+/* Accessibility - Skip Link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 0 0 4px 4px;
+  z-index: 9999;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 /* Reset & Base Styles */
 * {
   box-sizing: border-box;
