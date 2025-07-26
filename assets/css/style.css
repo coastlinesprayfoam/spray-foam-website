@@ -434,31 +434,26 @@ a[href^="tel:"],
 *,
 *::before,
 *::after {
-  hyphens: none !important;
   -webkit-hyphens: none !important;
   -moz-hyphens: none !important;
   -ms-hyphens: none !important;
+  hyphens: none !important;
   word-break: normal !important;
   overflow-wrap: break-word;
 }
 
 /* Additional hyphenation prevention for specific elements */
 p, h1, h2, h3, h4, h5, h6, span, div, a, li, td, th {
-  hyphens: none !important;
   -webkit-hyphens: none !important;
   -moz-hyphens: none !important;
   -ms-hyphens: none !important;
+  hyphens: none !important;
   word-break: normal !important;
 }
 
 /* Prevent automatic hyphenation in text content */
 body {
-  -webkit-hyphenate-limit-before: 0;
-  -webkit-hyphenate-limit-after: 0;
-  -webkit-hyphenate-limit-chars: 0 0 0;
-  -webkit-hyphenate-limit-lines: 0;
-  -webkit-hyphenate-limit-last: none;
-  -webkit-hyphenate-limit-zone: 0;
+  /* Removed unsupported webkit hyphenation properties for better browser compatibility */
 }
 
 /* Specific elements that should never be hyphenated */
@@ -470,10 +465,10 @@ body {
 .card-title,
 .hero-feature,
 .gallery-overlay h5 {
-  hyphens: none !important;
   -webkit-hyphens: none !important;
   -moz-hyphens: none !important;
   -ms-hyphens: none !important;
+  hyphens: none !important;
   word-break: keep-all !important;
 }
 
@@ -485,7 +480,7 @@ body {
   text-align: center;
   line-height: 1.2;
   padding: 0.5rem;
-  min-height: auto;
+  height: auto;
 }
 
 /* Increase card padding to prevent text from touching borders */
@@ -1115,8 +1110,8 @@ body {
 }
 
 @keyframes shimmer {
-  0% { left: -100%; }
-  100% { left: 100%; }
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 .alert-banner a {
