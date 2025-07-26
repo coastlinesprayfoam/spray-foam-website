@@ -99,26 +99,26 @@
   </script>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <!-- Main Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Main navigation">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="index.html" aria-label="Coastline Spray Foam - Home">
         <strong>Coastline Spray Foam</strong>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="service-areas.html">Areas</a></li>
-          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item ms-2">
-            <a class="btn btn-cta phone-button" href="tel:3216527465">
+        <ul class="navbar-nav ms-auto align-items-center" role="menubar">
+          <li class="nav-item" role="none"><a class="nav-link" href="index.html" role="menuitem" aria-current="page">Home</a></li>
+          <li class="nav-item" role="none"><a class="nav-link" href="about.html" role="menuitem">About</a></li>
+          <li class="nav-item" role="none"><a class="nav-link" href="services.html" role="menuitem">Services</a></li>
+          <li class="nav-item" role="none"><a class="nav-link" href="service-areas.html" role="menuitem">Areas</a></li>
+          <li class="nav-item" role="none"><a class="nav-link" href="gallery.html" role="menuitem">Gallery</a></li>
+          <li class="nav-item" role="none"><a class="nav-link" href="blog.html" role="menuitem">Blog</a></li>
+          <li class="nav-item" role="none"><a class="nav-link" href="contact.html" role="menuitem">Contact</a></li>
+          <li class="nav-item ms-2" role="none">
+            <a class="btn btn-cta phone-button" href="tel:3216527465" role="menuitem" aria-label="Call Coastline Spray Foam at 3 2 1 6 5 2 7 4 6 5">
               📞&nbsp;Call&nbsp;(321)&nbsp;652-7465
             </a>
           </li>
@@ -126,12 +126,13 @@
       </div>
     </div>
   </nav>
-  <!-- Modern Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <h1 class="fade-in-up">Florida's #1 Spray Foam Insulation Experts</h1>
-        <p class="lead fade-in-up">Cut your energy bills by up to 50% with professional spray foam insulation. Join 2,500+ Florida families saving thousands annually with our lifetime warranty guarantee.</p>
+  <!-- Hero Section -->
+  <main>
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-content">
+          <h1 id="hero-heading" class="fade-in-up">Florida's #1 Spray Foam Insulation Experts</h1>
+          <p class="lead fade-in-up">Cut your energy bills by up to 50% with professional spray foam insulation. Join 2,500+ Florida families saving thousands annually with our lifetime warranty guarantee.</p>
 
         <div class="hero-features fade-in-up">
           <div class="hero-feature">
@@ -496,9 +497,10 @@
       </div>
     </div>
   </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo" aria-label="Site footer">
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-4">
