@@ -475,7 +475,17 @@ body {
   -moz-hyphens: none !important;
   -ms-hyphens: none !important;
   word-break: keep-all !important;
-  white-space: nowrap;
+}
+
+/* Service icon specific styling to prevent text cutoff */
+.service-icon {
+  white-space: normal !important;
+  word-wrap: break-word;
+  overflow: visible;
+  text-align: center;
+  line-height: 1.2;
+  padding: 0.5rem;
+  min-height: auto;
 }
 
 /* Increase card padding to prevent text from touching borders */
