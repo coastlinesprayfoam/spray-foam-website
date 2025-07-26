@@ -478,6 +478,80 @@ body {
   white-space: nowrap;
 }
 
+/* Increase card padding to prevent text from touching borders */
+.card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 1.75rem !important; /* Increased from default 1.25rem (20px) to 1.75rem (28px) */
+}
+
+.card-header {
+  padding: 1.25rem 1.75rem !important; /* Increased horizontal padding */
+}
+
+.card-footer {
+  padding: 1.25rem 1.75rem !important; /* Increased horizontal padding */
+}
+
+/* Additional padding for specific card types */
+.service-card .card-body,
+.feature-card .card-body,
+.testimonial-card .card-body,
+.pricing-card .card-body {
+  padding: 2rem !important; /* Even more padding for content-heavy cards */
+}
+
+/* Ensure gallery cards have proper padding */
+.gallery-item .card-body {
+  padding: 1.5rem !important;
+}
+
+/* Contact page cards */
+.contact-card .card-body {
+  padding: 2rem !important;
+}
+
+/* About page stats cards */
+.stats-card .card-body {
+  padding: 2rem !important;
+}
+
+/* Service cards with icons */
+.card .service-icon {
+  margin-bottom: 1rem;
+}
+
+/* Ensure text content has breathing room */
+.card h1, .card h2, .card h3, .card h4, .card h5, .card h6 {
+  margin-bottom: 1rem;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.card ul, .card ol {
+  margin-bottom: 1rem;
+}
+
+/* Responsive card padding adjustments */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 1.5rem !important; /* Slightly less on mobile but still more than default */
+  }
+
+  .service-card .card-body,
+  .feature-card .card-body,
+  .testimonial-card .card-body,
+  .pricing-card .card-body {
+    padding: 1.75rem !important;
+  }
+}
+
 /* Gallery Styles */
 .gallery-filter {
   margin-bottom: 2rem;
