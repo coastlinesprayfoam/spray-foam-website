@@ -4,66 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deployment Test - Coastline Spray Foam</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #f5f5f5;
-        }
-        .test-container {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .test-item {
-            margin: 15px 0;
-            padding: 10px;
-            border-left: 4px solid #28a745;
-            background: #f8f9fa;
-        }
-        .test-item.warning {
-            border-left-color: #ffc107;
-        }
-        .test-item.error {
-            border-left-color: #dc3545;
-        }
-        .status {
-            font-weight: bold;
-            color: #28a745;
-        }
-        .status.warning {
-            color: #ffc107;
-        }
-        .status.error {
-            color: #dc3545;
-        }
-        .links {
-            margin: 20px 0;
-        }
-        .links a {
-            display: inline-block;
-            margin: 5px 10px 5px 0;
-            padding: 8px 16px;
-            background: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-        }
-        .links a:hover {
-            background: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="test-deployment-body">
     <div class="test-container">
         <h1>🚀 Coastline Spray Foam Website - Deployment Test</h1>
         
         <div class="test-item">
             <h3>✅ Deployment Status</h3>
-            <p><span class="status">SUCCESS</span> - Website successfully rebuilt and deployed to GitHub Pages</p>
+            <p><span class="test-status">SUCCESS</span> - Website successfully rebuilt and deployed to GitHub Pages</p>
             <p><strong>Live URL:</strong> <a href="https://eric4479.github.io/spray-foam-website/" target="_blank" rel="noopener">https://eric4479.github.io/spray-foam-website/</a></p>
             <p><strong>Local URL:</strong> <a href="http://localhost:8000" target="_blank" rel="noopener">http://localhost:8000</a></p>
             <p><strong>Last Rebuild:</strong> <span id="rebuild-time">January 26, 2025</span></p>
@@ -116,7 +65,7 @@
             </ul>
         </div>
 
-        <div class="links">
+        <div class="test-links">
             <h3>🔗 Test All Pages</h3>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
