@@ -214,6 +214,7 @@ p {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  white-space: nowrap;
 }
 
 .btn-cta {
@@ -225,6 +226,8 @@ p {
   box-shadow: var(--shadow);
   position: relative;
   overflow: hidden;
+  white-space: nowrap;
+  min-width: fit-content;
 }
 
 .btn-cta::before {
@@ -288,6 +291,60 @@ p {
   border-color: rgba(255,255,255,0.5);
   color: white;
   transform: translateY(-1px);
+}
+
+/* Phone Number Styling */
+.phone-number,
+.phone-link,
+a[href^="tel:"] {
+  white-space: nowrap;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.phone-button,
+.btn[href^="tel:"] {
+  white-space: nowrap;
+  min-width: fit-content;
+  flex-shrink: 0;
+}
+
+/* Ensure phone buttons don't wrap */
+.hero-cta-group,
+.cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-cta-group .btn,
+.cta-group .btn {
+  white-space: nowrap;
+  min-width: fit-content;
+  flex-shrink: 0;
+}
+
+/* Responsive phone button adjustments */
+@media (max-width: 576px) {
+  .btn-cta {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-cta-group,
+  .cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn,
+  .cta-group .btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
 }
 
 /* Modern Hero Section */
