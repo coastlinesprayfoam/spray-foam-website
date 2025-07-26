@@ -1012,7 +1012,10 @@ main {
   z-index: 1;
 }
 
-/* Hero section spacing is handled by main wrapper */
+/* Adjust hero padding when inside main wrapper to prevent double spacing */
+main .hero {
+  padding-top: 4rem; /* Reduced from 8rem since main already has 80px margin */
+}
 
 /* Fix card alignment and prevent overflow */
 .card {
