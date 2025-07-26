@@ -421,14 +421,61 @@ a[href^="mailto:"],
   overflow-wrap: normal;
 }
 
+/* Prevent phone numbers from breaking across lines */
+a[href^="tel:"],
+.phone-number,
+.phone-button {
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
 /* Prevent word hyphenation across the entire website */
-* {
-  hyphens: none;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  word-break: normal;
+*,
+*::before,
+*::after {
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+  -moz-hyphens: none !important;
+  -ms-hyphens: none !important;
+  word-break: normal !important;
   overflow-wrap: break-word;
+}
+
+/* Additional hyphenation prevention for specific elements */
+p, h1, h2, h3, h4, h5, h6, span, div, a, li, td, th {
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+  -moz-hyphens: none !important;
+  -ms-hyphens: none !important;
+  word-break: normal !important;
+}
+
+/* Prevent automatic hyphenation in text content */
+body {
+  -webkit-hyphenate-limit-before: 0;
+  -webkit-hyphenate-limit-after: 0;
+  -webkit-hyphenate-limit-chars: 0 0 0;
+  -webkit-hyphenate-limit-lines: 0;
+  -webkit-hyphenate-limit-last: none;
+  -webkit-hyphenate-limit-zone: 0;
+}
+
+/* Specific elements that should never be hyphenated */
+.service-icon,
+.stat-number,
+.stat-label,
+.badge,
+.btn,
+.card-title,
+.hero-feature,
+.gallery-overlay h5 {
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+  -moz-hyphens: none !important;
+  -ms-hyphens: none !important;
+  word-break: keep-all !important;
+  white-space: nowrap;
 }
 
 /* Gallery Styles */
