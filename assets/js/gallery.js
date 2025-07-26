@@ -19,6 +19,8 @@ class SprayFoamGallery {
     this.currentFilter = 'all';
     this.lazyLoadObserver = null;
     this.isInitialized = false;
+    this.imageCache = new Map();
+    this.preloadQueue = [];
     this.init();
   }
 
@@ -33,6 +35,7 @@ class SprayFoamGallery {
       this.setupFilterButtons();
       this.setupLightbox();
       this.renderGallery();
+      this.setupProgressiveLoading();
       this.isInitialized = true;
       console.log('SprayFoamGallery initialized successfully');
     } catch (error) {
@@ -153,23 +156,57 @@ class SprayFoamGallery {
     ];
   }
 
-  // Setup lazy loading for images
+  // Setup optimized lazy loading for images
   setupLazyLoading() {
     if ('IntersectionObserver' in window) {
       this.lazyLoadObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const img = entry.target;
-            img.src = img.dataset.src;
-            img.classList.remove('lazy');
+            this.loadImageOptimized(img);
             this.lazyLoadObserver.unobserve(img);
           }
         });
       }, {
-        rootMargin: '50px 0px',
+        rootMargin: '100px 0px', // Increased for better preloading
         threshold: 0.01
       });
     }
+  }
+
+  // Optimized image loading with error handling and fade-in effect
+  loadImageOptimized(img) {
+    const src = img.dataset.src;
+    if (!src) return;
+
+    // Create a new image to preload
+    const newImg = new Image();
+
+    newImg.onload = () => {
+      // Image loaded successfully
+      img.src = src;
+      img.classList.remove('lazy');
+      img.classList.add('loaded');
+
+      // Add fade-in effect
+      img.style.opacity = '0';
+      img.style.transition = 'opacity 0.3s ease-in-out';
+
+      // Trigger fade-in
+      requestAnimationFrame(() => {
+        img.style.opacity = '1';
+      });
+    };
+
+    newImg.onerror = () => {
+      // Handle image load error
+      img.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"%3E%3Crect width="400" height="300" fill="%23f1f5f9"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%2394a3b8"%3EImage not available%3C/text%3E%3C/svg%3E';
+      img.classList.remove('lazy');
+      img.classList.add('error');
+    };
+
+    // Start loading
+    newImg.src = src;
   }
 
   // Setup filter buttons
@@ -193,53 +230,82 @@ class SprayFoamGallery {
     // Lightbox will be handled by Bootstrap modal
   }
 
-  // Render gallery based on current filter
+  // Render gallery based on current filter with performance optimizations
   renderGallery() {
     const galleryGrid = document.getElementById('galleryGrid');
     if (!galleryGrid) return;
 
     // Filter images
-    const filteredImages = this.currentFilter === 'all' 
-      ? this.images 
-      : this.images.filter(img => 
-          img.category === this.currentFilter || 
+    const filteredImages = this.currentFilter === 'all'
+      ? this.images
+      : this.images.filter(img =>
+          img.category === this.currentFilter ||
           img.type === this.currentFilter
         );
 
-    // Clear existing content
-    galleryGrid.innerHTML = '';
+    // Use DocumentFragment for better performance
+    const fragment = document.createDocumentFragment();
 
-    // Render filtered images
-    filteredImages.forEach((image, index) => {
-      const galleryItem = this.createGalleryItem(image, index);
-      galleryGrid.appendChild(galleryItem);
-    });
+    // Render filtered images in batches to avoid blocking UI
+    const batchSize = 12;
+    let currentBatch = 0;
 
-    // Setup lazy loading for new images
-    if (this.lazyLoadObserver) {
-      const lazyImages = galleryGrid.querySelectorAll('img.lazy');
-      lazyImages.forEach(img => this.lazyLoadObserver.observe(img));
-    }
+    const renderBatch = () => {
+      const start = currentBatch * batchSize;
+      const end = Math.min(start + batchSize, filteredImages.length);
+
+      for (let i = start; i < end; i++) {
+        const galleryItem = this.createGalleryItem(filteredImages[i], i);
+        fragment.appendChild(galleryItem);
+      }
+
+      currentBatch++;
+
+      if (end < filteredImages.length) {
+        // Schedule next batch
+        requestAnimationFrame(renderBatch);
+      } else {
+        // All items rendered, add to DOM
+        galleryGrid.innerHTML = '';
+        galleryGrid.appendChild(fragment);
+
+        // Setup lazy loading for new images
+        if (this.lazyLoadObserver) {
+          const lazyImages = galleryGrid.querySelectorAll('img.lazy');
+          lazyImages.forEach(img => this.lazyLoadObserver.observe(img));
+        }
+      }
+    };
+
+    // Start rendering
+    renderBatch();
   }
 
-  // Create individual gallery item
+  // Create individual gallery item with optimized loading
   createGalleryItem(image, index) {
     const col = document.createElement('div');
     col.className = 'col-lg-4 col-md-6 filter-item';
-    
+
+    // Generate optimized placeholder with proper aspect ratio
+    const placeholder = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"%3E%3Crect width="400" height="300" fill="%23f8fafc"/%3E%3Ctext x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" fill="%2394a3b8" font-size="14"%3ELoading...%3C/text%3E%3Ctext x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" fill="%23cbd5e1" font-size="12"%3E' + image.title.substring(0, 20) + '...%3C/text%3E%3C/svg%3E';
+
     col.innerHTML = `
-      <div class="gallery-item position-relative" 
-           data-bs-toggle="modal" 
-           data-bs-target="#lightboxModal" 
-           onclick="gallery.openLightbox('${image.src}', '${image.title}', '${image.description}', '${image.date}')">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f1f5f9'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%2394a3b8'%3ELoading...%3C/text%3E%3C/svg%3E"
-             data-src="${image.src}" 
-             alt="${image.title}" 
-             class="lazy"
-             loading="lazy">
+      <div class="gallery-item position-relative"
+           data-bs-toggle="modal"
+           data-bs-target="#lightboxModal"
+           onclick="gallery.openLightbox('${image.src}', '${this.escapeHtml(image.title)}', '${this.escapeHtml(image.description)}', '${image.date}')">
+        <img src="${placeholder}"
+             data-src="${image.src}"
+             alt="${this.escapeHtml(image.title)}"
+             class="lazy gallery-image"
+             loading="lazy"
+             decoding="async"
+             width="400"
+             height="300"
+             style="aspect-ratio: 4/3; object-fit: cover;">
         <div class="gallery-overlay">
-          <h5>${image.title}</h5>
-          <p class="small">${image.description}</p>
+          <h5>${this.escapeHtml(image.title)}</h5>
+          <p class="small">${this.escapeHtml(image.description)}</p>
           <div class="d-flex gap-2 justify-content-center">
             <span class="badge bg-secondary">${image.category.charAt(0).toUpperCase() + image.category.slice(1)}</span>
             <span class="badge bg-primary">${image.type.charAt(0).toUpperCase() + image.type.slice(1)}</span>
@@ -248,8 +314,65 @@ class SprayFoamGallery {
         </div>
       </div>
     `;
-    
+
     return col;
+  }
+
+  // Escape HTML to prevent XSS
+  escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
+  // Preload critical images for better performance
+  preloadCriticalImages() {
+    // Preload first 6 images (above the fold)
+    const criticalImages = this.images.slice(0, 6);
+
+    criticalImages.forEach(image => {
+      if (!this.imageCache.has(image.src)) {
+        const img = new Image();
+        img.onload = () => {
+          this.imageCache.set(image.src, true);
+        };
+        img.src = image.src;
+      }
+    });
+  }
+
+  // Progressive image loading for better perceived performance
+  setupProgressiveLoading() {
+    // Start preloading after initial render
+    setTimeout(() => {
+      this.preloadCriticalImages();
+    }, 100);
+
+    // Preload more images on scroll
+    let preloadTimeout;
+    window.addEventListener('scroll', () => {
+      clearTimeout(preloadTimeout);
+      preloadTimeout = setTimeout(() => {
+        this.preloadNextBatch();
+      }, 150);
+    });
+  }
+
+  // Preload next batch of images
+  preloadNextBatch() {
+    const visibleImages = document.querySelectorAll('.gallery-item img.loaded');
+    const nextStartIndex = visibleImages.length;
+    const nextBatch = this.images.slice(nextStartIndex, nextStartIndex + 6);
+
+    nextBatch.forEach(image => {
+      if (!this.imageCache.has(image.src)) {
+        const img = new Image();
+        img.onload = () => {
+          this.imageCache.set(image.src, true);
+        };
+        img.src = image.src;
+      }
+    });
   }
 
   // Open lightbox with image details
