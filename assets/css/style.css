@@ -413,6 +413,14 @@ a[href^="tel:"] {
   align-items: center;
 }
 
+/* Prevent email addresses from breaking across lines */
+a[href^="mailto:"],
+.email-address {
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
 .hero-cta-group .btn,
 .cta-group .btn {
   white-space: nowrap;
