@@ -1015,6 +1015,11 @@ main {
   z-index: 1;
 }
 
+/* Ensure hero section doesn't overlap with fixed navbar when no main wrapper */
+.hero {
+  margin-top: 80px;
+}
+
 /* Fix card alignment and prevent overflow */
 .card {
   width: 100%;
