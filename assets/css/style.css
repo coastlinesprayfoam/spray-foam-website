@@ -296,7 +296,6 @@ p {
   position: relative;
   overflow: hidden;
   white-space: nowrap;
-  min-width: fit-content;
 }
 
 .btn-cta::before {
@@ -375,7 +374,6 @@ a[href^="tel:"] {
 .btn[href^="tel:"] {
   white-space: nowrap !important;
   min-width: -webkit-fill-available; /* Samsung Internet 5.0+ support */
-  min-width: fit-content;
   flex-shrink: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -419,7 +417,6 @@ a[href^="tel:"] {
 .cta-group .btn {
   white-space: nowrap;
   min-width: -webkit-fill-available; /* Samsung Internet 5.0+ support */
-  min-width: fit-content;
   flex-shrink: 0;
 }
 
