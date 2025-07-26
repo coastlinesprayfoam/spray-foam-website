@@ -536,85 +536,58 @@
           <div class="card">
             <div class="card-body">
               <h2 class="text-center mb-4">Request Service in Your Area</h2>
-              <p class="text-center text-muted mb-4">Fill out the form below and we'll contact you within 2 hours to schedule your free consultation</p>
+              <p class="text-center text-muted mb-4">Contact us directly for immediate service scheduling and your free consultation</p>
 
-              <form id="serviceRequestForm">
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <label for="firstName" class="form-label">First Name *</label>
-                    <input type="text" class="form-control" id="firstName" required>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="lastName" class="form-label">Last Name *</label>
-                    <input type="text" class="form-control" id="lastName" required>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="phone" class="form-label">Phone Number *</label>
-                    <input type="tel" class="form-control" id="phone" required>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="email" class="form-label">Email Address *</label>
-                    <input type="email" class="form-control" id="email" required>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="city" class="form-label">City *</label>
-                    <select class="form-select" id="city" required>
-                      <option value="">Select Your City</option>
-                      <optgroup label="Primary Service Areas">
-                        <option value="Orlando">Orlando</option>
-                        <option value="Melbourne">Melbourne</option>
-                        <option value="Cocoa">Cocoa</option>
-                        <option value="Titusville">Titusville</option>
-                        <option value="Winter Park">Winter Park</option>
-                        <option value="Altamonte Springs">Altamonte Springs</option>
-                        <option value="Palm Bay">Palm Bay</option>
-                        <option value="Rockledge">Rockledge</option>
-                      </optgroup>
-                      <optgroup label="Extended Service Areas">
-                        <option value="Daytona Beach">Daytona Beach</option>
-                        <option value="Palm Coast">Palm Coast</option>
-                        <option value="New Smyrna Beach">New Smyrna Beach</option>
-                        <option value="Sanford">Sanford</option>
-                        <option value="Lake Mary">Lake Mary</option>
-                        <option value="Mount Dora">Mount Dora</option>
-                        <option value="Other">Other (please specify in message)</option>
-                      </optgroup>
-                    </select>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="serviceType" class="form-label">Service Needed *</label>
-                    <select class="form-select" id="serviceType" required>
-                      <option value="">Select Service Type</option>
-                      <option value="residential-attic">Residential Attic Insulation</option>
-                      <option value="residential-walls">Residential Wall Insulation</option>
-                      <option value="residential-crawlspace">Crawl Space Sealing</option>
-                      <option value="commercial">Commercial Insulation</option>
-                      <option value="emergency">Emergency Service</option>
-                      <option value="consultation">Free Consultation</option>
-                    </select>
-                  </div>
-                  <div class="col-12">
-                    <label for="message" class="form-label">Project Details</label>
-                    <textarea class="form-control" id="message" rows="4" placeholder="Tell us about your project, timeline, or any specific questions..."></textarea>
-                  </div>
-                  <div class="col-12">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="urgentService">
-                      <label class="form-check-label" for="urgentService">
-                        This is an urgent/emergency service request
-                      </label>
+              <div class="text-center mb-4">
+                <a href="tel:3216527465" class="btn btn-primary btn-lg me-3">
+                  📞 Call (321) 652-7465 Now
+                </a>
+                <a href="mailto:info@coastlinesprayfoam.com" class="btn btn-outline-primary btn-lg">
+                  📧 Email for Service
+                </a>
+              </div>
+
+              <div class="row g-4 text-center">
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="text-primary">🏠 Residential Service</h5>
+                      <p>Home insulation and energy efficiency</p>
+                      <ul class="list-unstyled small">
+                        <li>• Attic and wall insulation</li>
+                        <li>• Crawl space sealing</li>
+                        <li>• Energy audits</li>
+                        <li>• Same-day service available</li>
+                      </ul>
                     </div>
                   </div>
-                  <div class="col-12 text-center">
-                    <button type="submit" class="btn btn-primary btn-lg">
-                      📧 Request Service in My Area
-                    </button>
-                    <p class="small text-muted mt-3">
-                      We'll contact you within 2 hours during business hours. For immediate assistance, call (321) 652-7465.
-                    </p>
+                </div>
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="text-primary">🏢 Commercial Service</h5>
+                      <p>Large-scale commercial projects</p>
+                      <ul class="list-unstyled small">
+                        <li>• Warehouse insulation</li>
+                        <li>• Office building efficiency</li>
+                        <li>• Industrial applications</li>
+                        <li>• Project management included</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
-              </form>
+              </div>
+
+              <div class="mt-4 text-center">
+                <p class="text-muted">
+                  <strong>Service Areas:</strong> Orlando, Melbourne, Cocoa, Titusville, Palm Coast, and all surrounding Central Florida areas
+                </p>
+                <p class="small text-muted">
+                  We'll contact you within 2 hours during business hours. For immediate assistance, call (321) 652-7465.
+                </p>
+              </div>
+
+
             </div>
           </div>
         </div>
@@ -742,20 +715,7 @@
       }
     });
 
-    // Service request form submission
-    document.getElementById('serviceRequestForm').addEventListener('submit', function(e) {
-      e.preventDefault();
 
-      // Get form data
-      const formData = new FormData(this);
-      const data = Object.fromEntries(formData);
-
-      // Show success message (in real implementation, this would submit to a server)
-      alert('Thank you for your service request! We will contact you within 2 hours during business hours. For immediate assistance, please call (321) 652-7465.');
-
-      // Reset form
-      this.reset();
-    });
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

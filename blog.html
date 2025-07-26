@@ -364,16 +364,20 @@
       <div class="row">
         <div class="col-lg-8 mx-auto text-center">
           <h2>Stay Updated with Energy Saving Tips</h2>
-          <p class="lead">Get monthly tips, industry insights, and exclusive offers delivered to your inbox.</p>
+          <p class="lead">Follow us for monthly tips, industry insights, and exclusive offers.</p>
 
-          <form class="row g-3 justify-content-center mt-4">
-            <div class="col-md-6">
-              <input type="email" class="form-control form-control-lg" placeholder="Enter your email address" required>
+          <div class="row g-3 justify-content-center mt-4">
+            <div class="col-md-4">
+              <a href="tel:3216527465" class="btn btn-primary btn-lg w-100">
+                📞 Call for Tips & Advice
+              </a>
             </div>
-            <div class="col-md-3">
-              <button type="submit" class="btn btn-primary btn-lg w-100">Subscribe</button>
+            <div class="col-md-4">
+              <a href="mailto:info@coastlinesprayfoam.com" class="btn btn-outline-primary btn-lg w-100">
+                📧 Email Us
+              </a>
             </div>
-          </form>
+          </div>
 
           <p class="small text-muted mt-3">
             ✅ Monthly energy tips • ✅ Exclusive offers • ✅ Industry insights • ✅ Unsubscribe anytime
@@ -584,17 +588,7 @@
       }
     });
 
-    // Newsletter form submission
-    document.querySelector('form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const email = this.querySelector('input[type="email"]').value;
 
-      // Show success message (in real implementation, this would submit to a server)
-      alert('Thank you for subscribing! You\'ll receive our monthly energy saving tips and exclusive offers.');
-
-      // Reset form
-      this.reset();
-    });
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
