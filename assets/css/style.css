@@ -416,18 +416,32 @@ a[href^="tel:"] {
 /* Prevent email addresses from breaking across lines */
 a[href^="mailto:"],
 .email-address {
-  white-space: nowrap;
-  word-break: keep-all;
-  overflow-wrap: normal;
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  -webkit-hyphens: none !important;
+  -moz-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
+  display: inline-block !important;
+  max-width: 100% !important;
+  overflow: visible !important;
 }
 
 /* Prevent phone numbers from breaking across lines */
 a[href^="tel:"],
 .phone-number,
 .phone-button {
-  white-space: nowrap;
-  word-break: keep-all;
-  overflow-wrap: normal;
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  -webkit-hyphens: none !important;
+  -moz-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
+  display: inline-block !important;
+  max-width: 100% !important;
+  overflow: visible !important;
 }
 
 /* Prevent word hyphenation across the entire website */
@@ -491,7 +505,7 @@ body {
 }
 
 .card-body {
-  padding: 1.75rem !important; /* Increased from default 1.25rem (20px) to 1.75rem (28px) */
+  padding: 2rem !important; /* Increased to 2rem (32px) to prevent text from touching borders */
 }
 
 .card-header {
@@ -517,7 +531,18 @@ body {
 
 /* Contact page cards */
 .contact-card .card-body {
-  padding: 2rem !important;
+  padding: 2.5rem !important; /* Extra padding for contact cards to ensure email visibility */
+}
+
+/* Ensure email addresses in contact cards are fully visible */
+.contact-card .email-address,
+.contact-card a[href^="mailto:"] {
+  font-size: 0.95rem !important;
+  line-height: 1.4 !important;
+  word-spacing: -0.1em !important;
+  letter-spacing: -0.02em !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
 }
 
 /* About page stats cards */
@@ -546,14 +571,14 @@ body {
 /* Responsive card padding adjustments */
 @media (max-width: 768px) {
   .card-body {
-    padding: 1.5rem !important; /* Slightly less on mobile but still more than default */
+    padding: 1.75rem !important; /* Increased mobile padding to prevent text touching borders */
   }
 
   .service-card .card-body,
   .feature-card .card-body,
   .testimonial-card .card-body,
   .pricing-card .card-body {
-    padding: 1.75rem !important;
+    padding: 2rem !important; /* Increased mobile padding for special cards */
   }
 }
 
