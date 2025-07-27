@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Gallery Page with Images -->
+  <url>
+    <loc>https://coastlinesprayfoam.com/gallery.html</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    
+    <!-- Residential Attic Insulation - Orlando -->
+    <image:image>
+      <image:loc>https://coastlinesprayfoam.com/assets/images/20240815_121229.jpg</image:loc>
+      <image:title>Residential Attic Insulation - Orlando</image:title>
+      <image:caption>Complete attic spray foam insulation in Orlando home, achieving significant energy savings</image:caption>
+      <image:geo_location>Orlando, Florida</image:geo_location>
+      <image:license>https://coastlinesprayfoam.com/terms-of-service.html</image:license>
+    </image:image>
+    
+    <!-- Crawl Space Sealing - Melbourne -->
+    <image:image>
+      <image:loc>https://coastlinesprayfoam.com/assets/images/20240830_081517.jpg</image:loc>
+      <image:title>Crawl Space Sealing - Melbourne</image:title>
+      <image:caption>Crawl space spray foam insulation and moisture control in Melbourne</image:caption>
+      <image:geo_location>Melbourne, Florida</image:geo_location>
+      <image:license>https://coastlinesprayfoam.com/terms-of-service.html</image:license>
+    </image:image>
+    
+    <!-- Commercial Warehouse - Cocoa -->
+    <image:image>
+      <image:loc>https://coastlinesprayfoam.com/assets/images/20240910_143434.jpg</image:loc>
+      <image:title>Commercial Warehouse - Cocoa</image:title>
+      <image:caption>Large-scale commercial spray foam project in Cocoa warehouse</image:caption>
+      <image:geo_location>Cocoa, Florida</image:geo_location>
+      <image:license>https://coastlinesprayfoam.com/terms-of-service.html</image:license>
+    </image:image>
+    
+    <!-- Cocoa Home Attic Insulation -->
+    <image:image>
+      <image:loc>https://coastlinesprayfoam.com/assets/images/20241017_104040.jpg</image:loc>
+      <image:title>Cocoa Home Attic Insulation</image:title>
+      <image:caption>Residential attic spray foam insulation in Cocoa home</image:caption>
+      <image:geo_location>Cocoa, Florida</image:geo_location>
+      <image:license>https://coastlinesprayfoam.com/terms-of-service.html</image:license>
+    </image:image>
+    
+    <!-- Crawl Space Encapsulation - Titusville -->
+    <image:image>
+      <image:loc>https://coastlinesprayfoam.com/assets/images/20241104_082819.jpg</image:loc>
+      <image:title>Crawl Space Encapsulation - Titusville</image:title>
+      <image:caption>Complete crawl space sealing and insulation in Titusville</image:caption>
+      <image:geo_location>Titusville, Florida</image:geo_location>
+      <image:license>https://coastlinesprayfoam.com/terms-of-service.html</image:license>
+    </image:image>
+    
+    <!-- Large Warehouse Project -->
+    <image:image>
+      <image:loc>https://coastlinesprayfoam.com/assets/images/20241202_091324.jpg</image:loc>
+      <image:title>Large Warehouse Project</image:title>
+      <image:caption>Large commercial warehouse spray foam insulation project</image:caption>
+      <image:geo_location>Central Florida</image:geo_location>
+      <image:license>https://coastlinesprayfoam.com/terms-of-service.html</image:license>
+    </image:image>
+    
+    <!-- Additional Gallery Images -->
+    <image:image>
+      <image:loc>https://coastlinesprayfoam.com/assets/images/20240815_121234.jpg</image:loc>
+      <image:title>Spray Foam Application Process</image:title>
+      <image:caption>Professional spray foam insulation application showing proper technique</image:caption>
+      <image:geo_location>Florida</image:geo_location>
+      <image:license>https://coastlinesprayfoam.com/terms-of-service.html</image:license>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://coastlinesprayfoam.com/assets/images/20240815_121238.jpg</image:loc>
+      <image:title>Completed Insulation Coverage</image:title>
+      <image:caption>Completed spray foam insulation showing excellent coverage and air sealing</image:caption>
+      <image:geo_location>Florida</image:geo_location>
+      <image:license>https://coastlinesprayfoam.com/terms-of-service.html</image:license>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://coastlinesprayfoam.com/assets/images/20240830_081520.jpg</image:loc>
+      <image:title>Crawl Space Before Treatment</image:title>
+      <image:caption>Crawl space before spray foam insulation and moisture control treatment</image:caption>
+      <image:geo_location>Florida</image:geo_location>
+      <image:license>https://coastlinesprayfoam.com/terms-of-service.html</image:license>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://coastlinesprayfoam.com/assets/images/20240830_081523.jpg</image:loc>
+      <image:title>Crawl Space After Treatment</image:title>
+      <image:caption>Crawl space after professional spray foam insulation and sealing</image:caption>
+      <image:geo_location>Florida</image:geo_location>
+      <image:license>https://coastlinesprayfoam.com/terms-of-service.html</image:license>
+    </image:image>
+    
+  </url>
+  
+  <!-- Home Page with Hero Image -->
+  <url>
+    <loc>https://coastlinesprayfoam.com/index.html</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    
+    <image:image>
+      <image:loc>https://coastlinesprayfoam.com/assets/images/20240815_121229.jpg</image:loc>
+      <image:title>Professional Spray Foam Insulation Florida</image:title>
+      <image:caption>Coastline Spray Foam - Professional spray foam insulation services across Florida</image:caption>
+      <image:geo_location>Florida</image:geo_location>
+      <image:license>https://coastlinesprayfoam.com/terms-of-service.html</image:license>
+    </image:image>
+  </url>
+  
+  <!-- Services Page -->
+  <url>
+    <loc>https://coastlinesprayfoam.com/services.html</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    
+    <image:image>
+      <image:loc>https://coastlinesprayfoam.com/assets/images/20240815_121229.jpg</image:loc>
+      <image:title>Spray Foam Insulation Services</image:title>
+      <image:caption>Complete spray foam insulation services for residential and commercial properties</image:caption>
+      <image:geo_location>Florida</image:geo_location>
+      <image:license>https://coastlinesprayfoam.com/terms-of-service.html</image:license>
+    </image:image>
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://coastlinesprayfoam.com/about.html</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    
+    <image:image>
+      <image:loc>https://coastlinesprayfoam.com/assets/images/20240815_121229.jpg</image:loc>
+      <image:title>About Coastline Spray Foam</image:title>
+      <image:caption>Professional spray foam insulation contractor serving Florida since 2024</image:caption>
+      <image:geo_location>Florida</image:geo_location>
+      <image:license>https://coastlinesprayfoam.com/terms-of-service.html</image:license>
+    </image:image>
+  </url>
+  
+</urlset>

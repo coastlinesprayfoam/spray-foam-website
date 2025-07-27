@@ -230,12 +230,21 @@ class SprayFoamGallery {
     // Lightbox will be handled by Bootstrap modal
   }
 
-  // Render gallery based on current filter with performance optimizations
+  // Enhanced gallery rendering with SEO optimization
   renderGallery() {
     const galleryGrid = document.getElementById('galleryGrid');
     if (!galleryGrid) return;
 
-    // Filter images
+    // Check if we have static content (for SEO)
+    const hasStaticContent = galleryGrid.querySelector('.gallery-item img[src*="assets/images"]');
+
+    if (hasStaticContent && this.currentFilter === 'all') {
+      // Keep static content visible for SEO, just add dynamic content
+      this.enhanceStaticGallery();
+      return;
+    }
+
+    // Filter images for dynamic rendering
     const filteredImages = this.currentFilter === 'all'
       ? this.images
       : this.images.filter(img =>
@@ -243,11 +252,17 @@ class SprayFoamGallery {
           img.type === this.currentFilter
         );
 
+    // Show loading indicator
+    const loadingIndicator = document.getElementById('loadingIndicator');
+    if (loadingIndicator) {
+      loadingIndicator.style.display = 'block';
+    }
+
     // Use DocumentFragment for better performance
     const fragment = document.createDocumentFragment();
 
-    // Render filtered images in batches to avoid blocking UI
-    const batchSize = 12;
+    // Render filtered images in optimized batches
+    const batchSize = 8; // Reduced for better performance
     let currentBatch = 0;
 
     const renderBatch = () => {
@@ -262,23 +277,110 @@ class SprayFoamGallery {
       currentBatch++;
 
       if (end < filteredImages.length) {
-        // Schedule next batch
-        requestAnimationFrame(renderBatch);
+        // Schedule next batch with delay for better UX
+        setTimeout(() => requestAnimationFrame(renderBatch), 50);
       } else {
-        // All items rendered, add to DOM
-        galleryGrid.innerHTML = '';
+        // All items rendered, update DOM
+        if (this.currentFilter !== 'all') {
+          galleryGrid.innerHTML = '';
+        }
         galleryGrid.appendChild(fragment);
+
+        // Hide loading indicator
+        if (loadingIndicator) {
+          loadingIndicator.style.display = 'none';
+        }
 
         // Setup lazy loading for new images
         if (this.lazyLoadObserver) {
           const lazyImages = galleryGrid.querySelectorAll('img.lazy');
           lazyImages.forEach(img => this.lazyLoadObserver.observe(img));
         }
+
+        // Trigger fade-in animation
+        this.animateGalleryItems();
       }
     };
 
     // Start rendering
-    renderBatch();
+    requestAnimationFrame(renderBatch);
+  }
+
+  // Enhance static gallery with dynamic features
+  enhanceStaticGallery() {
+    const staticImages = document.querySelectorAll('.gallery-item img[src*="assets/images"]');
+
+    // Add lazy loading to static images if needed
+    staticImages.forEach(img => {
+      if (!img.classList.contains('enhanced')) {
+        img.classList.add('enhanced');
+
+        // Add intersection observer for analytics
+        if (this.lazyLoadObserver) {
+          this.lazyLoadObserver.observe(img);
+        }
+      }
+    });
+
+    // Add remaining dynamic images
+    const staticImageSrcs = Array.from(staticImages).map(img => img.src);
+    const remainingImages = this.images.filter(image =>
+      !staticImageSrcs.some(src => src.includes(image.src.split('/').pop()))
+    );
+
+    if (remainingImages.length > 0) {
+      this.renderAdditionalImages(remainingImages);
+    }
+  }
+
+  // Render additional images beyond static content
+  renderAdditionalImages(images) {
+    const galleryGrid = document.getElementById('galleryGrid');
+    const loadingIndicator = document.getElementById('loadingIndicator');
+
+    if (loadingIndicator) {
+      loadingIndicator.style.display = 'block';
+    }
+
+    const fragment = document.createDocumentFragment();
+
+    // Render in smaller batches for better performance
+    images.slice(0, 12).forEach((image, index) => {
+      const galleryItem = this.createGalleryItem(image, index + 6);
+      fragment.appendChild(galleryItem);
+    });
+
+    // Insert before loading indicator
+    if (loadingIndicator) {
+      galleryGrid.insertBefore(fragment, loadingIndicator);
+      loadingIndicator.style.display = 'none';
+    } else {
+      galleryGrid.appendChild(fragment);
+    }
+
+    // Setup lazy loading
+    if (this.lazyLoadObserver) {
+      const newImages = galleryGrid.querySelectorAll('img.lazy:not(.observed)');
+      newImages.forEach(img => {
+        img.classList.add('observed');
+        this.lazyLoadObserver.observe(img);
+      });
+    }
+  }
+
+  // Add animation to gallery items
+  animateGalleryItems() {
+    const items = document.querySelectorAll('.gallery-item');
+    items.forEach((item, index) => {
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(20px)';
+
+      setTimeout(() => {
+        item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        item.style.opacity = '1';
+        item.style.transform = 'translateY(0)';
+      }, index * 100);
+    });
   }
 
   // Create individual gallery item with optimized loading
