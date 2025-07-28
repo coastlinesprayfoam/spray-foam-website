@@ -95,42 +95,8 @@
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <strong>Coastline Spray Foam</strong>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="service-areas.html">Areas</a></li>
-          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Resources
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="astro-website/dist/blog/index.html">📝 Blog</a></li>
-              <li><a class="dropdown-item" href="faq.html">❓ FAQ</a></li>
-              <li><a class="dropdown-item" href="cost-calculator.html">💰 Cost Calculator</a></li>
-              <li><a class="dropdown-item" href="new-to-florida-guide.html">🌴 New to Florida</a></li>
-              <li><a class="dropdown-item" href="hurricane-preparation.html">🌪️ Hurricane Prep</a></li>
-            </ul>
-          </li>
-          <li class="nav-item ms-2">
-            <a class="btn btn-cta phone-button" href="tel:3216527465">
-              📞&nbsp;Call&nbsp;(321)&nbsp;652-7465
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <!-- Unified Navigation Container -->
+  <div id="unified-nav"></div>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -466,6 +432,72 @@
     </div>
   </section>
 
+  <!-- Resources & Tools Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center mb-5">
+          <h2>Helpful Resources & Tools</h2>
+          <p class="lead">Everything you need to make informed decisions about spray foam insulation</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <div class="mb-3">
+                <span class="badge bg-primary fs-1">💰</span>
+              </div>
+              <h5>Cost Calculator</h5>
+              <p>Get an instant estimate for your spray foam insulation project.</p>
+              <a href="cost-calculator.html" class="btn btn-primary">Calculate Costs</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <div class="mb-3">
+                <span class="badge bg-primary fs-1">❓</span>
+              </div>
+              <h5>FAQ</h5>
+              <p>Common questions about spray foam insulation answered by experts.</p>
+              <a href="faq.html" class="btn btn-primary">View FAQ</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <div class="mb-3">
+                <span class="badge bg-warning fs-1">🌪️</span>
+              </div>
+              <h5>Hurricane Prep</h5>
+              <p>Protect your home from Florida's hurricane season with spray foam.</p>
+              <a href="hurricane-preparation.html" class="btn btn-warning">Hurricane Guide</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <div class="mb-3">
+                <span class="badge bg-success fs-1">🌴</span>
+              </div>
+              <h5>New to Florida</h5>
+              <p>Essential energy-saving tips for newcomers to the Sunshine State.</p>
+              <a href="new-to-florida-guide.html" class="btn btn-success">Florida Guide</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA Section -->
   <section class="section section-cta-blue text-center">
     <div class="container">
@@ -600,5 +632,8 @@
       });
     });
   </script>
+
+  <!-- Unified Navigation System -->
+  <script src="assets/js/unified-navigation.js"></script>
 </body>
 </html>
