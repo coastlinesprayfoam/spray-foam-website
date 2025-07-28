@@ -306,10 +306,6 @@ class SprayFoamGallery {
         <div class="gallery-overlay">
           <h5>${this.escapeHtml(image.title)}</h5>
           <p class="small">${this.escapeHtml(image.description)}</p>
-          <div class="d-flex gap-2 justify-content-center">
-            <span class="badge bg-secondary">${image.category.charAt(0).toUpperCase() + image.category.slice(1)}</span>
-            <span class="badge bg-primary">${image.type.charAt(0).toUpperCase() + image.type.slice(1)}</span>
-          </div>
           <small class="mt-2 opacity-75">${new Date(image.date).toLocaleDateString()}</small>
         </div>
       </div>
