@@ -40,16 +40,23 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="https://coastlinesprayfoamsolutions.com/">
 
-  <!-- Resource Hints -->
+  <!-- Enhanced Resource Hints for Performance -->
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" href="assets/css/critical.css" as="style">
   <link rel="preload" href="assets/css/style.css" as="style">
-  <link rel="preload" href="assets/images/20240815_121229.jpg" as="image">
+  <link rel="preload" href="assets/images/20240815_121229.jpg" as="image" type="image/jpeg">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" crossorigin>
+  <link rel="modulepreload" href="assets/js/gallery.js">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="assets/images/20240815_121229.jpg">
+  <!-- Favicon - Optimized -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/20240815_121229.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/20240815_121229.jpg">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/20240815_121229.jpg">
+  <link rel="manifest" href="/site.webmanifest">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,66 +64,188 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 
+  <!-- Critical CSS Inline for Performance -->
+  <style>
+    /* Critical above-the-fold CSS inlined for performance */
+    :root{--primary-color:#0f172a;--secondary-color:#f97316;--white:#ffffff;--transition:all 0.3s cubic-bezier(0.4,0,0.2,1)}*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:#0f172a;background-color:#ffffff;-webkit-font-smoothing:antialiased}.navbar{background-color:#ffffff;box-shadow:0 2px 4px rgba(0,0,0,0.1);position:fixed;top:0;width:100%;z-index:1000}.navbar-brand{font-weight:800;font-size:1.5rem;color:#0f172a;text-decoration:none}.hero{background:linear-gradient(135deg,#0f172a 0%,#0f172a 100%);color:#ffffff;padding:120px 0 80px;min-height:100vh;display:flex;align-items:center}.hero h1{font-size:3.5rem;font-weight:800;line-height:1.1;margin-bottom:1.5rem}.btn{display:inline-block;padding:0.75rem 1.5rem;border-radius:0.5rem;text-decoration:none;font-weight:600;transition:var(--transition);border:none;cursor:pointer}.btn-primary{background-color:#f97316;color:#ffffff}.container{max-width:1200px;margin:0 auto;padding:0 1rem}@media (max-width:768px){.hero h1{font-size:2.5rem}}
+  </style>
+
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"></noscript>
 
-  <!-- Custom CSS -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Custom CSS - Deferred for Performance -->
+  <link href="assets/css/style.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="assets/css/style.css" rel="stylesheet"></noscript>
 
-  <!-- Structured Data -->
+  <!-- Enhanced Structured Data for SEO -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Coastline Spray Foam",
-    "image": "https://coastlinesprayfoamsolutions.com/assets/images/20240815_121229.jpg",
-    "telephone": "+1-321-652-7465",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Serving All of Central Florida",
-      "addressLocality": "Orlando",
-      "addressRegion": "FL",
-      "postalCode": "32801",
-      "addressCountry": "US"
-    },
-    "url": "https://coastlinesprayfoamsolutions.com",
-    "areaServed": [
-      "Orlando, FL",
-      "Melbourne, FL",
-      "Cocoa, FL",
-      "Titusville, FL",
-      "Palm Coast, FL",
-      "Daytona Beach, FL",
-      "Central Florida"
-    ],
-    "serviceType": "Spray Foam Insulation",
-    "priceRange": "$$",
-    "openingHours": "Mo-Fr 07:00-19:00, Sa 08:00-18:00",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "5"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Spray Foam Insulation Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Residential Spray Foam Insulation"
-          }
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://coastlinesprayfoamsolutions.com/#business",
+        "name": "Coastline Spray Foam Solutions",
+        "alternateName": "Coastline Spray Foam",
+        "description": "Professional spray foam insulation contractor serving Florida since 2024. Licensed, insured, and committed to energy savings.",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://coastlinesprayfoamsolutions.com/assets/images/20240815_121229.jpg",
+          "width": 1200,
+          "height": 800,
+          "caption": "Professional spray foam insulation installation"
         },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Commercial Spray Foam Insulation"
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://coastlinesprayfoamsolutions.com/assets/images/20240815_121229.jpg",
+          "width": 300,
+          "height": 200
+        },
+        "telephone": "+1-321-652-7465",
+        "email": "info@coastlinesprayfoamsolutions.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Serving All of Central Florida",
+          "addressLocality": "Orlando",
+          "addressRegion": "FL",
+          "postalCode": "32801",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 28.5383,
+          "longitude": -81.3792
+        },
+        "url": "https://coastlinesprayfoamsolutions.com",
+        "sameAs": [
+          "https://coastlinesprayfoamsolutions.com"
+        ],
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Orlando",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "Florida"
+            }
+          },
+          {
+            "@type": "City",
+            "name": "Melbourne",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "Florida"
+            }
+          },
+          {
+            "@type": "City",
+            "name": "Cocoa",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "Florida"
+            }
+          },
+          {
+            "@type": "City",
+            "name": "Titusville",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "Florida"
+            }
           }
+        ],
+        "serviceType": [
+          "Spray Foam Insulation",
+          "Attic Insulation",
+          "Crawl Space Sealing",
+          "Commercial Insulation",
+          "Residential Insulation"
+        ],
+        "priceRange": "$$",
+        "openingHours": [
+          "Mo-Fr 07:00-19:00",
+          "Sa 08:00-18:00"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "reviewCount": "5"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Spray Foam Insulation Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Residential Spray Foam Insulation",
+                "description": "Professional spray foam insulation for homes"
+              },
+              "areaServed": "Florida"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Commercial Spray Foam Insulation",
+                "description": "Large-scale spray foam insulation for businesses"
+              },
+              "areaServed": "Florida"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Attic Insulation",
+                "description": "Attic spray foam insulation services"
+              },
+              "areaServed": "Florida"
+            }
+          ]
         }
-      ]
-    }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://coastlinesprayfoamsolutions.com/#website",
+        "url": "https://coastlinesprayfoamsolutions.com",
+        "name": "Coastline Spray Foam Solutions",
+        "description": "Florida's premier spray foam insulation contractor",
+        "publisher": {
+          "@id": "https://coastlinesprayfoamsolutions.com/#business"
+        },
+        "potentialAction": [
+          {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://coastlinesprayfoamsolutions.com/search?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://coastlinesprayfoamsolutions.com/#organization",
+        "name": "Coastline Spray Foam Solutions",
+        "url": "https://coastlinesprayfoamsolutions.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://coastlinesprayfoamsolutions.com/assets/images/20240815_121229.jpg"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-321-652-7465",
+          "contactType": "customer service",
+          "areaServed": "FL",
+          "availableLanguage": "English"
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -558,34 +687,71 @@
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Performance Monitoring -->
+  <script src="assets/js/performance.js" defer></script>
 
-  <!-- Custom JS - Updated for GitHub Pages deployment -->
+  <!-- Bootstrap JS - Deferred for Performance -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <!-- Service Worker Registration -->
   <script>
-    // Navbar scroll effect
-    window.addEventListener('scroll', function() {
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js')
+          .then(function(registration) {
+            console.log('ServiceWorker registration successful');
+          })
+          .catch(function(err) {
+            console.log('ServiceWorker registration failed');
+          });
+      });
+    }
+  </script>
+
+  <!-- Optimized Custom JavaScript -->
+  <script>
+    // Performance-optimized navbar scroll effect
+    let ticking = false;
+    function updateNavbar() {
       const navbar = document.querySelector('.navbar');
       if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
       }
-    });
+      ticking = false;
+    }
 
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
+    function requestTick() {
+      if (!ticking) {
+        requestAnimationFrame(updateNavbar);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener('scroll', requestTick, { passive: true });
+
+    // Optimized smooth scrolling for anchor links
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
       });
     });
+
+    // Preload critical resources
+    const preloadLink = document.createElement('link');
+    preloadLink.rel = 'prefetch';
+    preloadLink.href = '/gallery';
+    document.head.appendChild(preloadLink);
   </script>
 </body>
 </html>

@@ -1,21 +1,37 @@
-# Jekyll Configuration for GitHub Pages
+# Jekyll Configuration for GitHub Pages - SEO Optimized
 # Enable clean URLs without .html extension
 
 # Site settings
 title: "Coastline Spray Foam Solutions"
-description: "Professional spray foam insulation contractor serving Florida"
+description: "Florida's premier spray foam insulation contractor. Professional installation, energy savings, licensed & insured since 2024."
 url: "https://coastlinesprayfoamsolutions.com"
 baseurl: ""
+locale: "en_US"
+timezone: "America/New_York"
+
+# SEO settings
+author: "Coastline Spray Foam Solutions"
+logo: "/assets/images/20240815_121229.jpg"
+twitter_username: coastlinesprayfoam
+facebook_username: coastlinesprayfoam
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
+future: false
+show_drafts: false
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
-# Plugins
+# Plugins for SEO and Performance
 plugins:
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+  - jekyll-compress-images
 
 # Clean URLs - remove .html extension
 permalink: /:title/
