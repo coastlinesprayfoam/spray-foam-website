@@ -76,6 +76,21 @@ document.addEventListener('DOMContentLoaded', function() {
   const navContainer = document.getElementById('unified-nav');
   if (navContainer) {
     navContainer.innerHTML = createUnifiedNavigation(currentPage);
+
+    // Ensure hover events work on dynamically generated content
+    const navLinks = navContainer.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('mouseenter', function() {
+        this.style.color = '#ffc107';
+        this.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+      });
+      link.addEventListener('mouseleave', function() {
+        if (!this.classList.contains('active')) {
+          this.style.color = 'rgba(255, 255, 255, 0.9)';
+          this.style.backgroundColor = 'transparent';
+        }
+      });
+    });
   }
   
   // Add scroll effect

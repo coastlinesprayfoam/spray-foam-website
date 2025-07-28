@@ -36,9 +36,11 @@
   margin: 0 0.125rem;
 }
 
-.navbar-nav .nav-link:hover {
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-item .nav-link:hover {
   color: #ffc107 !important;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3s ease !important;
 }
 
 .navbar-nav .nav-link.active {
@@ -176,4 +178,19 @@ html {
 .btn-cta {
   backface-visibility: hidden;
   transform: translateZ(0);
+}
+
+/* Force hover states for dynamically generated content */
+#unified-nav .navbar-nav .nav-link:hover {
+  color: #ffc107 !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Ensure all navigation links have proper hover */
+.navbar .nav-link:hover,
+.navbar .navbar-nav .nav-link:hover,
+#unified-nav .nav-link:hover {
+  color: #ffc107 !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
 }
