@@ -1,41 +1,7 @@
-# Simplified Cloudflare Pages Configuration
+# Cloudflare Pages Configuration for Static Website
 name = "coastlinesprayfoam"
 compatibility_date = "2024-12-15"
 
-# Let Cloudflare Pages handle the build automatically
-# Build settings should be configured in Cloudflare dashboard:
-# - Build command: cd astro-website && npm install && npm run build
-# - Build output directory: astro-website/dist
-# - Root directory: /
-
-# Basic redirects for SEO
-[[redirects]]
-from = "https://www.coastlinesprayfoam.com/*"
-to = "https://coastlinesprayfoam.com/:splat"
-status = 301
-
-[[redirects]]
-from = "http://coastlinesprayfoam.com/*"
-to = "https://coastlinesprayfoam.com/:splat"
-status = 301
-
-[[redirects]]
-from = "http://www.coastlinesprayfoam.com/*"
-to = "https://coastlinesprayfoam.com/:splat"
-status = 301
-
-# Redirects for SEO
-[[redirects]]
-from = "https://www.coastlinesprayfoam.com/*"
-to = "https://coastlinesprayfoam.com/:splat"
-status = 301
-
-[[redirects]]
-from = "http://coastlinesprayfoam.com/*"
-to = "https://coastlinesprayfoam.com/:splat"
-status = 301
-
-[[redirects]]
-from = "http://www.coastlinesprayfoam.com/*"
-to = "https://coastlinesprayfoam.com/:splat"
-status = 301
+# Static assets configuration
+[assets]
+directory = "."
