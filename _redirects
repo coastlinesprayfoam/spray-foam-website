@@ -1,13 +1,11 @@
 # Cloudflare Pages Redirects
-# Force HTTPS and remove www
-
-# Redirect www to non-www
-https://www.coastlinesprayfoam.com/* https://coastlinesprayfoam.com/:splat 301!
-
-# Redirect HTTP to HTTPS
-http://coastlinesprayfoam.com/* https://coastlinesprayfoam.com/:splat 301!
-http://www.coastlinesprayfoam.com/* https://coastlinesprayfoam.com/:splat 301!
+# Only relative URLs are allowed in Cloudflare Pages
 
 # SEO-friendly redirects for common variations
 /home /index.html 301
 /home.html /index.html 301
+
+# Redirect common paths
+/contact /contact.html 301
+/about /about.html 301
+/services /services.html 301
