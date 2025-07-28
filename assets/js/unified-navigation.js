@@ -77,19 +77,22 @@ document.addEventListener('DOMContentLoaded', function() {
   if (navContainer) {
     navContainer.innerHTML = createUnifiedNavigation(currentPage);
 
-    // Ensure hover events work on dynamically generated content
-    const navLinks = navContainer.querySelectorAll('.nav-link');
+    // Ensure hover events work on dynamically generated content (excluding phone button)
+    const navLinks = navContainer.querySelectorAll('.nav-link:not(.btn-cta)');
     navLinks.forEach(link => {
-      link.addEventListener('mouseenter', function() {
-        this.style.color = '#ffc107';
-        this.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-      });
-      link.addEventListener('mouseleave', function() {
-        if (!this.classList.contains('active')) {
-          this.style.color = 'rgba(255, 255, 255, 0.9)';
-          this.style.backgroundColor = 'transparent';
-        }
-      });
+      // Only add hover events to actual navigation links, not buttons
+      if (!link.classList.contains('btn-cta') && !link.href.includes('tel:')) {
+        link.addEventListener('mouseenter', function() {
+          this.style.color = '#ffc107';
+          this.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+        });
+        link.addEventListener('mouseleave', function() {
+          if (!this.classList.contains('active')) {
+            this.style.color = 'rgba(255, 255, 255, 0.9)';
+            this.style.backgroundColor = 'transparent';
+          }
+        });
+      }
     });
   }
   
