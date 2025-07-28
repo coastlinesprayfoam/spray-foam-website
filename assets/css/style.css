@@ -425,22 +425,47 @@ a[href^="tel:"] {
   align-items: center;
 }
 
-/* Prevent email addresses from breaking across lines */
+/* Email address styling with proper spacing */
 a[href^="mailto:"],
-.email-address,
-*[href*="@"],
-*:contains("@") {
-  white-space: nowrap !important;
-  word-break: keep-all !important;
-  overflow-wrap: normal !important;
+.email-address {
+  word-break: break-all !important;
+  overflow-wrap: break-word !important;
   -webkit-hyphens: none !important;
   -moz-hyphens: none !important;
   -ms-hyphens: none !important;
   hyphens: none !important;
   display: inline-block !important;
   max-width: 100% !important;
-  overflow: visible !important;
-  text-overflow: ellipsis !important;
+  line-height: 1.4 !important;
+  padding: 0.25rem 0 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Ensure email containers have proper spacing */
+.email-address {
+  min-height: 2.5rem;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Contact card spacing fixes */
+.card-body {
+  padding: 1.5rem !important;
+  min-height: 200px;
+}
+
+.card-body.d-flex.flex-column {
+  justify-content: space-between;
+}
+
+/* Contact information section spacing */
+.col-md-6.mb-4 {
+  margin-bottom: 2rem !important;
+}
+
+.d-flex .flex-grow-1 {
+  min-width: 0; /* Allows flex item to shrink */
+  word-wrap: break-word;
 }
 
 /* Prevent phone numbers from breaking across lines */
