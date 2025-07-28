@@ -5,7 +5,5 @@
 /home /index.html 301
 /home.html /index.html 301
 
-# Redirect common paths
-/contact /contact.html 301
-/about /about.html 301
-/services /services.html 301
+# Note: Removed problematic redirects that were causing redirect loops
+# Pages should be accessed directly via their .html URLs
