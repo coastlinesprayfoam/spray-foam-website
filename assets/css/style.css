@@ -1780,3 +1780,21 @@ img {
   color: #28a745;
   border: 2px solid #28a745;
 }
+
+/* Savings Calculator Styles */
+.savings-result-hidden {
+  display: none;
+}
+
+.savings-result-visible {
+  display: block;
+}
+
+/* Loading Indicator Styles */
+.loading-indicator-hidden {
+  display: none;
+}
+
+.loading-indicator-visible {
+  display: block;
+}

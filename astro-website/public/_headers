@@ -1,0 +1,49 @@
+# Cloudflare Pages Headers
+# Security and performance headers
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Cache-Control: public, max-age=86400
+
+# Cache static assets for 1 year
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache CSS and JS for 1 year
+*.css
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: text/css
+
+*.js
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: application/javascript
+
+# Cache images for 1 year
+*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+
+*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache fonts for 1 year
+*.woff
+  Cache-Control: public, max-age=31536000, immutable
+
+*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+*.ttf
+  Cache-Control: public, max-age=31536000, immutable

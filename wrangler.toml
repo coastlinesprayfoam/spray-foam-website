@@ -1,55 +1,14 @@
-# wrangler.toml
+# Simplified Cloudflare Pages Configuration
 name = "coastlinesprayfoam"
 compatibility_date = "2024-12-15"
 
-# Astro build configuration
-[build]
-command = "cd astro-website && npm run build"
-cwd = "."
+# Let Cloudflare Pages handle the build automatically
+# Build settings should be configured in Cloudflare dashboard:
+# - Build command: cd astro-website && npm install && npm run build
+# - Build output directory: astro-website/dist
+# - Root directory: /
 
-# Static site assets from Astro build
-[assets]
-directory = "astro-website/dist"
-include = ["**/*"]
-
-# Performance optimizations
-[minify]
-html = true
-css = true
-js = true
-
-# Security headers
-[headers]
-"/*" = [
-  { name = "X-Content-Type-Options", value = "nosniff" },
-  { name = "X-Frame-Options", value = "DENY" },
-  { name = "X-XSS-Protection", value = "1; mode=block" },
-  { name = "Referrer-Policy", value = "strict-origin-when-cross-origin" },
-  { name = "Permissions-Policy", value = "geolocation=(), microphone=(), camera=()" }
-]
-
-# Cache headers for performance
-"*.css" = [
-  { name = "Cache-Control", value = "public, max-age=31536000" }
-]
-
-"*.js" = [
-  { name = "Cache-Control", value = "public, max-age=31536000" }
-]
-
-"*.jpg" = [
-  { name = "Cache-Control", value = "public, max-age=31536000" }
-]
-
-"*.png" = [
-  { name = "Cache-Control", value = "public, max-age=31536000" }
-]
-
-"*.html" = [
-  { name = "Cache-Control", value = "public, max-age=86400" }
-]
-
-# Redirects for SEO
+# Basic redirects for SEO
 [[redirects]]
 from = "https://www.coastlinesprayfoam.com/*"
 to = "https://coastlinesprayfoam.com/:splat"

@@ -1,0 +1,13 @@
+# Cloudflare Pages Redirects
+# SEO redirects to canonical domain
+
+# Redirect www to non-www
+https://www.coastlinesprayfoam.com/* https://coastlinesprayfoam.com/:splat 301!
+
+# Redirect HTTP to HTTPS
+http://coastlinesprayfoam.com/* https://coastlinesprayfoam.com/:splat 301!
+http://www.coastlinesprayfoam.com/* https://coastlinesprayfoam.com/:splat 301!
+
+# Legacy redirects (if needed)
+/home /
+/index.html /

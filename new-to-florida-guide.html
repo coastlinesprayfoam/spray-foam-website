@@ -249,7 +249,7 @@
                 </div>
                 
                 <div class="col-12">
-                  <div id="savingsResult" class="alert alert-success" style="display: none;">
+                  <div id="savingsResult" class="alert alert-success savings-result-hidden">
                     <!-- Results will be populated by JavaScript -->
                   </div>
                 </div>
@@ -330,7 +330,8 @@
           <a href="tel:3216527465" class="btn btn-success btn-lg">Get Exact Quote - Call Now!</a>
         </div>
       `;
-      resultDiv.style.display = 'block';
+      resultDiv.classList.remove('savings-result-hidden');
+      resultDiv.classList.add('savings-result-visible');
       
       // Track calculator usage
       if (typeof gtag !== 'undefined') {
