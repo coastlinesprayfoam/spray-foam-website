@@ -270,6 +270,18 @@ p {
   width: 80%;
 }
 
+/* Phone navigation link styling */
+.phone-nav-link {
+  font-weight: 600 !important;
+  color: var(--secondary-color) !important;
+  white-space: nowrap !important;
+}
+
+.phone-nav-link:hover {
+  color: var(--secondary-light) !important;
+  background-color: var(--bg-tertiary) !important;
+}
+
 /* Modern Button System */
 .btn {
   font-weight: 600;
@@ -1576,12 +1588,18 @@ img {
     background: var(--bg-tertiary);
   }
 
-  .navbar .btn-cta {
-    margin-top: 1rem;
-    width: 100%;
-    max-width: 250px;
-    margin-left: auto;
-    margin-right: auto;
+  .phone-nav-link {
+    margin-top: 0.5rem;
+    text-align: center;
+    font-weight: 700 !important;
+    color: var(--secondary-color) !important;
+    background-color: var(--bg-tertiary);
+    border-radius: var(--radius);
+  }
+
+  .phone-nav-link:hover {
+    background-color: var(--secondary-color) !important;
+    color: white !important;
   }
 }
 
