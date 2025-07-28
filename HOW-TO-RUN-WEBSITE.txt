@@ -1,0 +1,99 @@
+🏠 COASTLINE SPRAY FOAM WEBSITE - HOW TO RUN LOCALLY
+================================================================
+
+✅ NAVIGATION ISSUE FIXED!
+The Blog, Contact, and Phone buttons now work consistently with other navigation items.
+
+🚀 QUICK START - 3 EASY OPTIONS:
+
+OPTION 1: DOUBLE-CLICK METHOD (EASIEST)
+--------------------------------------
+1. Double-click on "test-website.html" 
+   → This will open in your browser immediately
+   → Shows the fixed navigation and tests all links
+
+2. Double-click on "index.html"
+   → Opens the main website
+   → All navigation buttons now work consistently
+
+OPTION 2: AUTOMATIC SERVER (RECOMMENDED)
+---------------------------------------
+1. Double-click on "start-server.bat"
+   → This will automatically start a local server
+   → Opens your browser to http://localhost:8000
+   → Works with Python or Node.js if installed
+
+OPTION 3: MANUAL SERVER SETUP
+-----------------------------
+1. Open Command Prompt (cmd)
+2. Navigate to this folder:
+   cd "C:\path\to\your\website\folder"
+3. Run one of these commands:
+   
+   For Python:
+   python -m http.server 8000
+   
+   For Node.js:
+   npx serve -p 8000
+
+4. Open browser to: http://localhost:8000
+
+📁 FILE STRUCTURE:
+-----------------
+index.html          - Main homepage
+blog.html           - Blog page (FIXED navigation)
+contact.html        - Contact page (FIXED navigation)
+about.html          - About page
+services.html       - Services page
+gallery.html        - Gallery page
+service-areas.html  - Service areas page
+assets/             - CSS, images, and JavaScript files
+test-website.html   - Standalone test page (works without server)
+start-server.bat    - Automatic server starter
+
+🔧 WHAT WAS FIXED:
+-----------------
+✅ Blog button - Now matches other nav links
+✅ Contact button - Consistent styling and behavior  
+✅ Phone button - Same hover effects as other nav items
+✅ Mobile navigation - All buttons work consistently
+✅ Visual consistency - Uniform spacing and appearance
+
+📞 CONTACT INFO:
+---------------
+Phone: (321) 652-7465
+Email: info@coastlinesprayfoam.com
+Service Area: All of Central Florida
+
+🆘 TROUBLESHOOTING:
+------------------
+Problem: "This site can't be reached" or "Connection refused"
+Solution: Use OPTION 1 (double-click method) instead
+
+Problem: Links don't work when opening HTML files directly
+Solution: Use OPTION 2 (start-server.bat) to run a local server
+
+Problem: Python/Node.js not found
+Solution: 
+- Install Python from https://python.org/downloads
+- Or use OPTION 1 (double-click method)
+
+Problem: CSS/Images not loading
+Solution: Make sure all files are in the same folder structure
+
+✅ SUCCESS INDICATORS:
+---------------------
+- Navigation menu shows consistent styling for all buttons
+- Phone button looks like other nav links but with phone styling
+- All hover effects work the same way
+- Mobile menu shows all items consistently
+- No more visual inconsistencies between nav buttons
+
+🎯 NEXT STEPS:
+-------------
+1. Test the website using any of the 3 options above
+2. Verify that Blog, Contact, and Phone buttons now match other nav items
+3. Check mobile responsiveness by resizing your browser
+4. All navigation issues should now be resolved!
+
+For questions or issues, contact: info@coastlinesprayfoam.com
