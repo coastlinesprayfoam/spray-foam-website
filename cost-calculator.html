@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>Spray Foam Insulation Cost Calculator Florida | Free Estimate | Coastline Spray Foam</title>
+  <meta name="title" content="Spray Foam Insulation Cost Calculator Florida | Free Estimate | Coastline Spray Foam">
+  <meta name="description" content="Calculate your spray foam insulation cost instantly! Get accurate pricing for your Florida home, see energy savings, and ROI. Free detailed quotes available.">
+  <meta name="keywords" content="spray foam cost calculator, insulation cost Florida, spray foam price estimate, Orlando insulation cost, Melbourne spray foam pricing">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://coastlinesprayfoam.com/cost-calculator.html">
+  <meta property="og:title" content="Spray Foam Insulation Cost Calculator Florida">
+  <meta property="og:description" content="Calculate your spray foam insulation cost instantly! Get accurate pricing and energy savings estimates.">
+  <meta property="og:image" content="https://coastlinesprayfoam.com/assets/images/20240815_121229.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://coastlinesprayfoam.com/cost-calculator.html">
+  <meta property="twitter:title" content="Spray Foam Insulation Cost Calculator Florida">
+  <meta property="twitter:description" content="Calculate your spray foam insulation cost instantly! Get accurate pricing and energy savings estimates.">
+  <meta property="twitter:image" content="https://coastlinesprayfoam.com/assets/images/20240815_121229.jpg">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://coastlinesprayfoam.com/cost-calculator.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/images/20240815_121229.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <strong>Coastline Spray Foam</strong>
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="service-areas.html">Areas</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="astro-website/dist/blog/index.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="tel:3216527465">📞 (321) 652-7465</a></li>
+          <li class="nav-item ms-2">
+            <a href="tel:3216527465" class="btn btn-cta">📞 (321) 652-7465</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8 mx-auto text-center hero-content">
+          <h1 class="fade-in-up">💰 Spray Foam Cost Calculator</h1>
+          <p class="lead fade-in-up">Get instant pricing estimates for your Florida home. See costs, energy savings, and ROI in real-time.</p>
+          
+          <!-- Trust Badges -->
+          <div class="trust-badges fade-in-up">
+            <div class="trust-badge">✅ Accurate Pricing</div>
+            <div class="trust-badge">🏆 No Hidden Fees</div>
+            <div class="trust-badge">⭐ Instant Results</div>
+            <div class="trust-badge">🛡️ Free Consultation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cost Calculator -->
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="card">
+            <div class="card-body p-4">
+              <h2 class="text-center mb-4">🏠 Your Home Details</h2>
+              
+              <div class="row g-4">
+                <!-- Home Size -->
+                <div class="col-md-6">
+                  <label class="form-label"><strong>Home Size (Square Feet)</strong></label>
+                  <select class="form-control" id="homeSize" onchange="calculateCost()" title="Select your home size in square feet">
+                    <option value="">Select your home size</option>
+                    <option value="1000">1,000 sq ft</option>
+                    <option value="1500">1,500 sq ft</option>
+                    <option value="2000">2,000 sq ft</option>
+                    <option value="2500">2,500 sq ft</option>
+                    <option value="3000">3,000 sq ft</option>
+                    <option value="3500">3,500 sq ft</option>
+                    <option value="4000">4,000+ sq ft</option>
+                  </select>
+                </div>
+
+                <!-- Foam Type -->
+                <div class="col-md-6">
+                  <label class="form-label"><strong>Foam Type</strong></label>
+                  <select class="form-control" id="foamType" onchange="calculateCost()" title="Choose the type of spray foam insulation">
+                    <option value="">Select foam type</option>
+                    <option value="open">Open Cell ($3-5/sq ft) - Cost Effective</option>
+                    <option value="closed">Closed Cell ($5-8/sq ft) - Premium Performance</option>
+                    <option value="both">Both Types - Hybrid Approach</option>
+                  </select>
+                </div>
+
+                <!-- Areas to Insulate -->
+                <div class="col-md-6">
+                  <label class="form-label"><strong>Areas to Insulate</strong></label>
+                  <select class="form-control" id="areas" onchange="calculateCost()" title="Select which areas of your home to insulate">
+                    <option value="">Select areas</option>
+                    <option value="attic">Attic Only</option>
+                    <option value="walls">Walls Only</option>
+                    <option value="crawl">Crawl Space Only</option>
+                    <option value="attic_walls">Attic + Walls</option>
+                    <option value="whole_house">Whole House</option>
+                  </select>
+                </div>
+
+                <!-- Current Energy Bill -->
+                <div class="col-md-6">
+                  <label class="form-label"><strong>Current Monthly Energy Bill</strong></label>
+                  <select class="form-control" id="energyBill" onchange="calculateCost()" title="Select your current monthly energy bill amount">
+                    <option value="">Select current bill</option>
+                    <option value="150">$100-150/month</option>
+                    <option value="200">$150-200/month</option>
+                    <option value="250">$200-250/month</option>
+                    <option value="300">$250-300/month</option>
+                    <option value="350">$300-350/month</option>
+                    <option value="400">$350+/month</option>
+                  </select>
+                </div>
+
+                <!-- Location -->
+                <div class="col-md-6">
+                  <label class="form-label"><strong>Location</strong></label>
+                  <select class="form-control" id="location" onchange="calculateCost()" title="Select your city or location in Central Florida">
+                    <option value="">Select your city</option>
+                    <option value="orlando">Orlando</option>
+                    <option value="melbourne">Melbourne</option>
+                    <option value="palm_bay">Palm Bay</option>
+                    <option value="cocoa">Cocoa</option>
+                    <option value="titusville">Titusville</option>
+                    <option value="other">Other Central Florida</option>
+                  </select>
+                </div>
+
+                <!-- Home Age -->
+                <div class="col-md-6">
+                  <label class="form-label"><strong>Home Age</strong></label>
+                  <select class="form-control" id="homeAge" onchange="calculateCost()" title="Select the age of your home">
+                    <option value="">Select home age</option>
+                    <option value="new">Less than 5 years</option>
+                    <option value="recent">5-15 years</option>
+                    <option value="older">15-30 years</option>
+                    <option value="vintage">30+ years</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Calculate Button -->
+              <div class="text-center mt-4">
+                <button class="btn btn-primary btn-lg" onclick="calculateCost()" id="calculateBtn">
+                  🧮 Calculate My Cost & Savings
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div id="resultsSection" class="savings-result-hidden">
+            <div class="card">
+              <div class="card-body p-4">
+                <h2 class="text-center mb-4">📊 Your Personalized Estimate</h2>
+                
+                <div class="row g-4 text-center">
+                  <div class="col-lg-3 col-md-6">
+                    <div class="card bg-primary text-white h-100">
+                      <div class="card-body">
+                        <h3 id="totalCost">$0</h3>
+                        <p class="mb-0">Total Investment</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-3 col-md-6">
+                    <div class="card bg-success text-white h-100">
+                      <div class="card-body">
+                        <h3 id="monthlySavings">$0</h3>
+                        <p class="mb-0">Monthly Savings</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-3 col-md-6">
+                    <div class="card bg-info text-white h-100">
+                      <div class="card-body">
+                        <h3 id="annualSavings">$0</h3>
+                        <p class="mb-0">Annual Savings</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-3 col-md-6">
+                    <div class="card bg-warning text-white h-100">
+                      <div class="card-body">
+                        <h3 id="paybackPeriod">0</h3>
+                        <p class="mb-0">Payback (Years)</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Detailed Breakdown -->
+                <div class="mt-4">
+                  <h4>💡 Your Energy Savings Breakdown</h4>
+                  <div id="savingsBreakdown" class="alert alert-info">
+                    <!-- Populated by JavaScript -->
+                  </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="text-center mt-4">
+                  <h4>Ready to Start Saving?</h4>
+                  <p class="lead">Get an exact quote with a free in-home consultation</p>
+                  <a href="tel:3216527465" class="btn btn-success btn-lg me-3">
+                    📞 Call for Exact Quote
+                  </a>
+                  <a href="contact.html" class="btn btn-outline-primary btn-lg">
+                    Schedule Consultation
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center mb-5">
+          <h2>Why Choose Coastline Spray Foam?</h2>
+          <p class="lead">Professional installation with guaranteed results</p>
+        </div>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="text-center">
+            <div class="mb-3">
+              <span class="badge bg-primary fs-1">🏆</span>
+            </div>
+            <h5>Licensed & Insured</h5>
+            <p>Fully licensed contractors with comprehensive insurance coverage for your peace of mind.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6">
+          <div class="text-center">
+            <div class="mb-3">
+              <span class="badge bg-primary fs-1">⭐</span>
+            </div>
+            <h5>5-Star Service</h5>
+            <p>Consistently rated 5 stars by satisfied customers across Central Florida.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6">
+          <div class="text-center">
+            <div class="mb-3">
+              <span class="badge bg-primary fs-1">🛡️</span>
+            </div>
+            <h5>Quality Guarantee</h5>
+            <p>We stand behind our work with comprehensive warranties and quality guarantees.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6">
+          <div class="text-center">
+            <div class="mb-3">
+              <span class="badge bg-primary fs-1">💰</span>
+            </div>
+            <h5>Best Value</h5>
+            <p>Competitive pricing with superior materials and professional installation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Cost Calculator Script -->
+  <script>
+    function calculateCost() {
+      const homeSize = parseInt(document.getElementById('homeSize').value);
+      const foamType = document.getElementById('foamType').value;
+      const areas = document.getElementById('areas').value;
+      const energyBill = parseInt(document.getElementById('energyBill').value);
+      const location = document.getElementById('location').value;
+      const homeAge = document.getElementById('homeAge').value;
+
+      // Check if all required fields are filled
+      if (!homeSize || !foamType || !areas || !energyBill) {
+        return;
+      }
+
+      // Calculate base cost per sq ft
+      let costPerSqFt = 0;
+      if (foamType === 'open') costPerSqFt = 4;
+      if (foamType === 'closed') costPerSqFt = 6.5;
+      if (foamType === 'both') costPerSqFt = 5.5;
+
+      // Adjust for area coverage
+      let coverageMultiplier = 1;
+      if (areas === 'attic') coverageMultiplier = 0.4;
+      if (areas === 'walls') coverageMultiplier = 0.6;
+      if (areas === 'crawl') coverageMultiplier = 0.3;
+      if (areas === 'attic_walls') coverageMultiplier = 0.8;
+      if (areas === 'whole_house') coverageMultiplier = 1.0;
+
+      // Calculate total cost
+      const totalCost = Math.round(homeSize * costPerSqFt * coverageMultiplier);
+
+      // Calculate energy savings (30-50% reduction)
+      const savingsPercent = 40; // Average 40% savings
+      const monthlySavings = Math.round(energyBill * (savingsPercent / 100));
+      const annualSavings = monthlySavings * 12;
+
+      // Calculate payback period
+      const paybackYears = Math.round((totalCost / annualSavings) * 10) / 10;
+
+      // Update display
+      document.getElementById('totalCost').textContent = '$' + totalCost.toLocaleString();
+      document.getElementById('monthlySavings').textContent = '$' + monthlySavings;
+      document.getElementById('annualSavings').textContent = '$' + annualSavings.toLocaleString();
+      document.getElementById('paybackPeriod').textContent = paybackYears + ' years';
+
+      // Create breakdown text
+      const breakdown = `
+        <strong>Your Current Situation:</strong><br>
+        • Monthly energy bill: $${energyBill}<br>
+        • Annual energy cost: $${energyBill * 12}<br><br>
+        
+        <strong>After Spray Foam Installation:</strong><br>
+        • New monthly bill: $${energyBill - monthlySavings}<br>
+        • Annual energy cost: $${(energyBill - monthlySavings) * 12}<br>
+        • Total savings over 10 years: $${(annualSavings * 10).toLocaleString()}<br><br>
+        
+        <strong>Return on Investment:</strong><br>
+        • Break-even point: ${paybackYears} years<br>
+        • 10-year net profit: $${((annualSavings * 10) - totalCost).toLocaleString()}
+      `;
+
+      document.getElementById('savingsBreakdown').innerHTML = breakdown;
+
+      // Show results
+      const resultsSection = document.getElementById('resultsSection');
+      resultsSection.classList.remove('savings-result-hidden');
+      resultsSection.classList.add('savings-result-visible');
+
+      // Scroll to results
+      resultsSection.scrollIntoView({ behavior: 'smooth' });
+
+      // Track calculator usage
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'calculator_complete', {
+          'event_category': 'engagement',
+          'event_label': 'cost_calculator',
+          'value': totalCost
+        });
+      }
+    }
+  </script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  
+  <!-- Production Optimization Scripts -->
+  <script src="assets/js/analytics-tracking.js"></script>
+  <script src="assets/js/local-seo-schema.js"></script>
+</body>
+</html>
