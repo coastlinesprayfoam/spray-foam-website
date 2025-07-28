@@ -1,0 +1,90 @@
+/* Mobile-First Navigation Enhancements */
+
+/* Ensure navigation is mobile-friendly */
+.navbar-nav .nav-link {
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Mobile navigation improvements */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.95);
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: white !important;
+  }
+  
+  .navbar-nav .nav-link:last-child {
+    border-bottom: none;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0.25rem;
+  }
+  
+  .btn-cta {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+}
+
+/* Desktop navigation spacing */
+@media (min-width: 992px) {
+  .navbar-nav .nav-link {
+    margin: 0 0.25rem;
+  }
+  
+  .btn-cta {
+    margin-left: 1rem;
+    white-space: nowrap;
+  }
+}
+
+/* Ensure phone button is prominent */
+.btn-cta {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Active page styling */
+.nav-link.active {
+  color: #ffc107 !important;
+  font-weight: 600;
+}
+
+/* Ensure navbar is always on top */
+.navbar {
+  z-index: 1050;
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Smooth scrolling for better UX */
+html {
+  scroll-behavior: smooth;
+}
