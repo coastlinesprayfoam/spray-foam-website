@@ -66,9 +66,9 @@
   --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Black Glass Theme Variables */
+/* Dark Theme with Glass Effects Variables */
 :root {
-  /* Glass Theme Colors */
+  /* Dark Theme Glass Colors */
   --glass-bg: rgba(0, 0, 0, 0.85);
   --glass-bg-light: rgba(0, 0, 0, 0.7);
   --glass-bg-lighter: rgba(0, 0, 0, 0.5);
@@ -78,7 +78,7 @@
   --glass-text-muted: rgba(255, 255, 255, 0.7);
   --glass-text-dim: rgba(255, 255, 255, 0.5);
 
-  /* Glass Effects */
+  /* Glassmorphism Effects */
   --glass-blur: blur(20px);
   --glass-blur-light: blur(10px);
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
@@ -86,32 +86,32 @@
   --glass-inset: inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
-/* Black Glass Theme */
-[data-theme="glass"] {
-  /* Background Colors - Glass Theme */
+/* Dark Theme */
+[data-theme="dark"] {
+  /* Background Colors - Dark Theme */
   --bg-primary: #000000;
   --bg-secondary: #0a0a0a;
   --bg-tertiary: #111111;
   --bg-card: var(--glass-bg);
   --bg-overlay: var(--glass-bg-light);
 
-  /* Text Colors - Glass Theme */
+  /* Text Colors - Dark Theme */
   --text-primary: var(--glass-text);
   --text-secondary: var(--glass-text-muted);
   --text-muted: var(--glass-text-dim);
   --text-light: var(--glass-text-dim);
   --text-inverse: var(--black);
 
-  /* Border Colors - Glass Theme */
+  /* Border Colors - Dark Theme */
   --border-color: var(--glass-border);
   --border-light: var(--glass-border);
   --border-dark: var(--glass-border-light);
 
-  /* Shadow Colors - Glass Theme */
+  /* Shadow Colors - Dark Theme */
   --shadow-color: rgba(0, 0, 0, 0.6);
   --shadow-color-light: rgba(0, 0, 0, 0.4);
 
-  /* Enhanced shadows for glass effect */
+  /* Enhanced shadows for dark theme */
   --shadow-sm: 0 2px 8px var(--shadow-color-light);
   --shadow: 0 8px 16px var(--shadow-color), 0 4px 8px var(--shadow-color-light);
   --shadow-md: 0 16px 32px var(--shadow-color), 0 8px 16px var(--shadow-color-light);
@@ -190,14 +190,14 @@ body {
   transition: var(--transition);
 }
 
-/* Glass Theme Body Background */
-[data-theme="glass"] body {
+/* Dark Theme Body Background */
+[data-theme="dark"] body {
   background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
   background-attachment: fixed;
   color: var(--glass-text);
 }
 
-[data-theme="glass"] body::before {
+[data-theme="dark"] body::before {
   content: '';
   position: fixed;
   top: 0;
@@ -291,8 +291,8 @@ p {
   border-bottom: 1px solid var(--border-color);
 }
 
-/* Glass Theme Navigation */
-[data-theme="glass"] .navbar {
+/* Dark Theme Navigation */
+[data-theme="dark"] .navbar {
   background: var(--glass-bg-light) !important;
   -webkit-backdrop-filter: var(--glass-blur);
   backdrop-filter: var(--glass-blur);
@@ -300,20 +300,20 @@ p {
   box-shadow: var(--glass-shadow);
 }
 
-[data-theme="glass"] .navbar.scrolled {
+[data-theme="dark"] .navbar.scrolled {
   background: var(--glass-bg) !important;
   box-shadow: var(--glass-shadow-lg);
 }
 
-[data-theme="glass"] .navbar-brand {
+[data-theme="dark"] .navbar-brand {
   color: var(--glass-text) !important;
 }
 
-[data-theme="glass"] .nav-link {
+[data-theme="dark"] .nav-link {
   color: var(--glass-text-muted) !important;
 }
 
-[data-theme="glass"] .nav-link:hover {
+[data-theme="dark"] .nav-link:hover {
   color: var(--glass-text) !important;
 }
 
@@ -1119,32 +1119,32 @@ body {
   color: var(--text-primary);
 }
 
-/* Glass Theme Card Effects */
-[data-theme="glass"] .card {
+/* Dark Theme Card Effects */
+[data-theme="dark"] .card {
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
-  backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
   box-shadow: var(--glass-shadow), var(--glass-inset);
   color: var(--glass-text);
 }
 
-[data-theme="glass"] .card:hover {
+[data-theme="dark"] .card:hover {
   background: var(--glass-bg-light);
   border-color: var(--glass-border-light);
   box-shadow: var(--glass-shadow-lg), var(--glass-inset);
   transform: translateY(-2px);
 }
 
-[data-theme="glass"] .card-body {
+[data-theme="dark"] .card-body {
   color: var(--glass-text);
 }
 
-[data-theme="glass"] .card-title {
+[data-theme="dark"] .card-title {
   color: var(--glass-text);
 }
 
-[data-theme="glass"] .card-text {
+[data-theme="dark"] .card-text {
   color: var(--glass-text-muted);
 }
 

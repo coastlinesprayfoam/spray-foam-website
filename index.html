@@ -273,7 +273,7 @@
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           <li class="nav-item">
             <button type="button" id="theme-toggle" class="btn btn-outline-secondary btn-sm me-2" aria-label="Toggle theme">
-              🌙 Glass
+              ☀️ Light
             </button>
           </li>
           <li class="nav-item">
@@ -838,17 +838,17 @@
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
 
-    // Check for saved theme preference or default to 'light'
-    const currentTheme = localStorage.getItem('theme') || 'light';
+    // Check for saved theme preference or default to 'dark'
+    const currentTheme = localStorage.getItem('theme') || 'dark';
     body.setAttribute('data-theme', currentTheme);
 
     // Update button text based on current theme
     function updateThemeButton(theme) {
-      if (theme === 'glass') {
+      if (theme === 'dark') {
         themeToggle.innerHTML = '☀️ Light';
         themeToggle.className = 'btn btn-outline-light btn-sm me-2';
       } else {
-        themeToggle.innerHTML = '🌙 Glass';
+        themeToggle.innerHTML = '🌙 Dark';
         themeToggle.className = 'btn btn-outline-secondary btn-sm me-2';
       }
     }
@@ -859,7 +859,7 @@
     // Theme toggle event listener
     themeToggle.addEventListener('click', function() {
       const currentTheme = body.getAttribute('data-theme');
-      const newTheme = currentTheme === 'glass' ? 'light' : 'glass';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
       body.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
