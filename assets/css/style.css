@@ -66,7 +66,60 @@
   --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Dark Mode Support */
+/* Black Glass Theme Variables */
+:root {
+  /* Glass Theme Colors */
+  --glass-bg: rgba(0, 0, 0, 0.85);
+  --glass-bg-light: rgba(0, 0, 0, 0.7);
+  --glass-bg-lighter: rgba(0, 0, 0, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-border-light: rgba(255, 255, 255, 0.2);
+  --glass-text: rgba(255, 255, 255, 0.95);
+  --glass-text-muted: rgba(255, 255, 255, 0.7);
+  --glass-text-dim: rgba(255, 255, 255, 0.5);
+
+  /* Glass Effects */
+  --glass-blur: blur(20px);
+  --glass-blur-light: blur(10px);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --glass-shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.6);
+  --glass-inset: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Black Glass Theme */
+[data-theme="glass"] {
+  /* Background Colors - Glass Theme */
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0a;
+  --bg-tertiary: #111111;
+  --bg-card: var(--glass-bg);
+  --bg-overlay: var(--glass-bg-light);
+
+  /* Text Colors - Glass Theme */
+  --text-primary: var(--glass-text);
+  --text-secondary: var(--glass-text-muted);
+  --text-muted: var(--glass-text-dim);
+  --text-light: var(--glass-text-dim);
+  --text-inverse: var(--black);
+
+  /* Border Colors - Glass Theme */
+  --border-color: var(--glass-border);
+  --border-light: var(--glass-border);
+  --border-dark: var(--glass-border-light);
+
+  /* Shadow Colors - Glass Theme */
+  --shadow-color: rgba(0, 0, 0, 0.6);
+  --shadow-color-light: rgba(0, 0, 0, 0.4);
+
+  /* Enhanced shadows for glass effect */
+  --shadow-sm: 0 2px 8px var(--shadow-color-light);
+  --shadow: 0 8px 16px var(--shadow-color), 0 4px 8px var(--shadow-color-light);
+  --shadow-md: 0 16px 32px var(--shadow-color), 0 8px 16px var(--shadow-color-light);
+  --shadow-lg: 0 24px 48px var(--shadow-color), 0 12px 24px var(--shadow-color-light);
+  --shadow-xl: 0 32px 64px rgba(0, 0, 0, 0.8);
+}
+
+/* Auto Dark Mode Support */
 @media (prefers-color-scheme: dark) {
   :root {
     /* Dark Mode Theme Colors */
@@ -134,6 +187,29 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: var(--transition);
+}
+
+/* Glass Theme Body Background */
+[data-theme="glass"] body {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+  background-attachment: fixed;
+  color: var(--glass-text);
+}
+
+[data-theme="glass"] body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
   transition: background-color var(--transition), color var(--transition);
 }
 
@@ -213,6 +289,32 @@ p {
   padding: 1.25rem 0;
   transition: var(--transition);
   border-bottom: 1px solid var(--border-color);
+}
+
+/* Glass Theme Navigation */
+[data-theme="glass"] .navbar {
+  background: var(--glass-bg-light) !important;
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+[data-theme="glass"] .navbar.scrolled {
+  background: var(--glass-bg) !important;
+  box-shadow: var(--glass-shadow-lg);
+}
+
+[data-theme="glass"] .navbar-brand {
+  color: var(--glass-text) !important;
+}
+
+[data-theme="glass"] .nav-link {
+  color: var(--glass-text-muted) !important;
+}
+
+[data-theme="glass"] .nav-link:hover {
+  color: var(--glass-text) !important;
 }
 
 .navbar.scrolled {
@@ -1015,6 +1117,35 @@ body {
   transition: var(--transition);
   overflow: hidden;
   color: var(--text-primary);
+}
+
+/* Glass Theme Card Effects */
+[data-theme="glass"] .card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow), var(--glass-inset);
+  color: var(--glass-text);
+}
+
+[data-theme="glass"] .card:hover {
+  background: var(--glass-bg-light);
+  border-color: var(--glass-border-light);
+  box-shadow: var(--glass-shadow-lg), var(--glass-inset);
+  transform: translateY(-2px);
+}
+
+[data-theme="glass"] .card-body {
+  color: var(--glass-text);
+}
+
+[data-theme="glass"] .card-title {
+  color: var(--glass-text);
+}
+
+[data-theme="glass"] .card-text {
+  color: var(--glass-text-muted);
 }
 
 .card:hover {

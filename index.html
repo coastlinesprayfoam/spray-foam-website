@@ -272,6 +272,11 @@
           <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           <li class="nav-item">
+            <button type="button" id="theme-toggle" class="btn btn-outline-secondary btn-sm me-2" aria-label="Toggle theme">
+              🌙 Glass
+            </button>
+          </li>
+          <li class="nav-item">
             <a class="nav-link phone-nav-link" href="tel:3216527465" aria-label="Call Coastline Spray Foam at (321) 652-7465">
               📞 Call (321) 652-7465
             </a>
@@ -828,6 +833,44 @@
     preloadLink.rel = 'prefetch';
     preloadLink.href = '/gallery';
     document.head.appendChild(preloadLink);
+
+    // Theme Switcher Functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Check for saved theme preference or default to 'light'
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    body.setAttribute('data-theme', currentTheme);
+
+    // Update button text based on current theme
+    function updateThemeButton(theme) {
+      if (theme === 'glass') {
+        themeToggle.innerHTML = '☀️ Light';
+        themeToggle.className = 'btn btn-outline-light btn-sm me-2';
+      } else {
+        themeToggle.innerHTML = '🌙 Glass';
+        themeToggle.className = 'btn btn-outline-secondary btn-sm me-2';
+      }
+    }
+
+    // Initialize button state
+    updateThemeButton(currentTheme);
+
+    // Theme toggle event listener
+    themeToggle.addEventListener('click', function() {
+      const currentTheme = body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'glass' ? 'light' : 'glass';
+
+      body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeButton(newTheme);
+
+      // Add smooth transition effect
+      body.style.transition = 'all 0.3s ease';
+      setTimeout(() => {
+        body.style.transition = '';
+      }, 300);
+    });
   </script>
 
   <!-- Google Analytics 4 -->
