@@ -270,6 +270,18 @@ p {
   width: 80%;
 }
 
+/* Phone navigation link styling */
+.phone-nav-link {
+  font-weight: 600 !important;
+  color: var(--secondary-color) !important;
+  white-space: nowrap !important;
+}
+
+.phone-nav-link:hover {
+  color: var(--secondary-light) !important;
+  background-color: var(--bg-tertiary) !important;
+}
+
 /* Modern Button System */
 .btn {
   font-weight: 600;
@@ -413,25 +425,57 @@ a[href^="tel:"] {
   align-items: center;
 }
 
-/* Prevent email addresses from breaking across lines */
+/* Email address styling with proper spacing */
 a[href^="mailto:"],
 .email-address {
-  white-space: nowrap !important;
-  word-break: keep-all !important;
-  overflow-wrap: normal !important;
+  word-break: break-all !important;
+  overflow-wrap: break-word !important;
   -webkit-hyphens: none !important;
   -moz-hyphens: none !important;
   -ms-hyphens: none !important;
   hyphens: none !important;
   display: inline-block !important;
   max-width: 100% !important;
-  overflow: visible !important;
+  line-height: 1.4 !important;
+  padding: 0.25rem 0 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Ensure email containers have proper spacing */
+.email-address {
+  min-height: 2.5rem;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Contact card spacing fixes */
+.card-body {
+  padding: 1.5rem !important;
+  min-height: 200px;
+}
+
+.card-body.d-flex.flex-column {
+  justify-content: space-between;
+}
+
+/* Contact information section spacing */
+.col-md-6.mb-4 {
+  margin-bottom: 2rem !important;
+}
+
+.d-flex .flex-grow-1 {
+  min-width: 0; /* Allows flex item to shrink */
+  word-wrap: break-word;
 }
 
 /* Prevent phone numbers from breaking across lines */
 a[href^="tel:"],
 .phone-number,
-.phone-button {
+.phone-button,
+.phone-nav-link,
+*[href*="tel:"],
+*:contains("(321)"),
+*:contains("652-7465") {
   white-space: nowrap !important;
   word-break: keep-all !important;
   overflow-wrap: normal !important;
@@ -442,6 +486,7 @@ a[href^="tel:"],
   display: inline-block !important;
   max-width: 100% !important;
   overflow: visible !important;
+  text-overflow: ellipsis !important;
 }
 
 /* Prevent word hyphenation across the entire website */
@@ -452,22 +497,55 @@ a[href^="tel:"],
   -moz-hyphens: none !important;
   -ms-hyphens: none !important;
   hyphens: none !important;
-  word-break: normal !important;
-  overflow-wrap: break-word;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  word-wrap: normal !important;
 }
 
 /* Additional hyphenation prevention for specific elements */
-p, h1, h2, h3, h4, h5, h6, span, div, a, li, td, th {
+p, h1, h2, h3, h4, h5, h6, span, div, a, li, td, th, strong, em, b, i {
   -webkit-hyphens: none !important;
   -moz-hyphens: none !important;
   -ms-hyphens: none !important;
   hyphens: none !important;
-  word-break: normal !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  word-wrap: normal !important;
 }
 
 /* Prevent automatic hyphenation in text content */
 body {
-  /* Removed unsupported webkit hyphenation properties for better browser compatibility */
+  -webkit-hyphens: none !important;
+  -moz-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+}
+
+/* Prevent hyphenation of specific business words and phrases */
+.no-hyphen,
+*:contains("Several"),
+*:contains("Professional"),
+*:contains("Coastline"),
+*:contains("Florida"),
+*:contains("Orlando"),
+*:contains("Melbourne"),
+*:contains("Titusville"),
+*:contains("Licensed"),
+*:contains("Insured"),
+*:contains("Emergency"),
+*:contains("Residential"),
+*:contains("Commercial"),
+*:contains("Installation"),
+*:contains("Insulation"),
+*:contains("Consultation") {
+  -webkit-hyphens: none !important;
+  -moz-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
+  word-break: keep-all !important;
+  white-space: nowrap;
 }
 
 /* Specific elements that should never be hyphenated */
@@ -1368,10 +1446,13 @@ main {
 
 .card-body {
   padding: 1.5rem;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  -webkit-hyphens: auto; /* Safari on iOS 4.2+ support */
-  hyphens: auto;
+  word-wrap: normal;
+  overflow-wrap: normal;
+  -webkit-hyphens: none !important;
+  -moz-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
+  word-break: keep-all !important;
 }
 
 /* Fix button alignment and prevent wrapping issues */
@@ -1404,16 +1485,24 @@ main {
 
 /* Fix text overflow and alignment */
 h1, h2, h3, h4, h5, h6 {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  -webkit-hyphens: auto;
-  hyphens: auto;
+  word-wrap: normal;
+  overflow-wrap: normal;
+  -webkit-hyphens: none !important;
+  -moz-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
+  word-break: keep-all !important;
   max-width: 100%;
 }
 
 p, li, span {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  word-wrap: normal;
+  overflow-wrap: normal;
+  -webkit-hyphens: none !important;
+  -moz-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
+  word-break: keep-all !important;
   max-width: 100%;
 }
 
@@ -1576,12 +1665,18 @@ img {
     background: var(--bg-tertiary);
   }
 
-  .navbar .btn-cta {
-    margin-top: 1rem;
-    width: 100%;
-    max-width: 250px;
-    margin-left: auto;
-    margin-right: auto;
+  .phone-nav-link {
+    margin-top: 0.5rem;
+    text-align: center;
+    font-weight: 700 !important;
+    color: var(--secondary-color) !important;
+    background-color: var(--bg-tertiary);
+    border-radius: var(--radius);
+  }
+
+  .phone-nav-link:hover {
+    background-color: var(--secondary-color) !important;
+    color: white !important;
   }
 }
 

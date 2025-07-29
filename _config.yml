@@ -1,0 +1,82 @@
+# Jekyll Configuration for GitHub Pages - SEO Optimized
+# Enable clean URLs without .html extension
+
+# Site settings
+title: "Coastline Spray Foam Solutions"
+description: "Florida's premier spray foam insulation contractor. Professional installation, energy savings, licensed & insured since 2024."
+url: "https://coastlinesprayfoamsolutions.com"
+baseurl: ""
+locale: "en_US"
+timezone: "America/New_York"
+
+# SEO settings
+author: "Coastline Spray Foam Solutions"
+logo: "/assets/images/20240815_121229.jpg"
+twitter_username: coastlinesprayfoam
+facebook_username: coastlinesprayfoam
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+future: false
+show_drafts: false
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Plugins for SEO and Performance
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+  - jekyll-compress-images
+
+# Clean URLs - remove .html extension
+permalink: /:title/
+
+# Collections and defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+      permalink: /:basename/
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - TESTING.md
+  - deploy.md
+  - Code Citations.md
+  - sprayfoam.code-workspace
+  - node_modules/
+  - vendor/
+
+# Include files
+include:
+  - _pages
+
+# SEO and social
+author: "Coastline Spray Foam Solutions"
+twitter:
+  username: coastlinesprayfoam
+facebook:
+  app_id: 
+  publisher: 
+social:
+  name: "Coastline Spray Foam Solutions"
+  links:
+    - https://coastlinesprayfoamsolutions.com
+
+# Analytics
+google_analytics: 
+
+# Compression
+sass:
+  style: compressed
+
+# Security
+safe: true

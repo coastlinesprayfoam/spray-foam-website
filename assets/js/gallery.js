@@ -47,85 +47,85 @@ class SprayFoamGallery {
   loadImageData() {
     this.images = [
       // August 2024 Projects
-      { src: 'assets/images/20240815_121229.jpg', category: 'residential', type: 'attic', title: 'Residential Attic Insulation - Orlando', description: 'Complete attic spray foam insulation in Orlando home, achieving 40% energy savings', date: '2024-08-15' },
-      { src: 'assets/images/20240815_121234.jpg', category: 'residential', type: 'attic', title: 'Attic Spray Foam Application', description: 'Professional spray foam installation process showing complete coverage', date: '2024-08-15' },
-      { src: 'assets/images/20240815_121238.jpg', category: 'residential', type: 'attic', title: 'Finished Attic Insulation Project', description: 'Completed residential attic insulation with R-6.5 per inch coverage', date: '2024-08-15' },
-      { src: 'assets/images/20240815_121249.jpg', category: 'residential', type: 'attic', title: 'Attic Insulation Detail Work', description: 'Detailed spray foam application ensuring complete air sealing', date: '2024-08-15' },
-      { src: 'assets/images/20240815_121312.jpg', category: 'residential', type: 'attic', title: 'Residential Energy Upgrade', description: 'Home energy efficiency improvement with professional insulation', date: '2024-08-15' },
+      { src: 'assets/images/20240815_121229.jpg', category: 'residential', type: 'attic', title: 'Orlando Home Attic Project', description: 'Spray foam insulation application in residential attic space', date: '2024-08-15' },
+      { src: 'assets/images/20240815_121234.jpg', category: 'residential', type: 'attic', title: 'Attic Insulation Work', description: 'Professional spray foam installation in progress', date: '2024-08-15' },
+      { src: 'assets/images/20240815_121238.jpg', category: 'residential', type: 'attic', title: 'Completed Attic Installation', description: 'Finished spray foam insulation providing complete coverage', date: '2024-08-15' },
+      { src: 'assets/images/20240815_121249.jpg', category: 'residential', type: 'attic', title: 'Detailed Attic Work', description: 'Close-up view of professional spray foam application', date: '2024-08-15' },
+      { src: 'assets/images/20240815_121312.jpg', category: 'residential', type: 'attic', title: 'Attic Insulation Service', description: 'Quality spray foam installation for improved energy efficiency', date: '2024-08-15' },
 
-      { src: 'assets/images/20240830_081517.jpg', category: 'residential', type: 'crawlspace', title: 'Crawl Space Sealing - Melbourne', description: 'Crawl space spray foam insulation and moisture control in Melbourne', date: '2024-08-30' },
-      { src: 'assets/images/20240830_081519.jpg', category: 'residential', type: 'crawlspace', title: 'Crawl Space Transformation', description: 'Before and after crawl space insulation showing moisture barrier', date: '2024-08-30' },
-      { src: 'assets/images/20240830_081526.jpg', category: 'residential', type: 'crawlspace', title: 'Crawl Space Encapsulation', description: 'Complete crawl space encapsulation with spray foam insulation', date: '2024-08-30' },
-      { src: 'assets/images/20240830_124715.jpg', category: 'residential', type: 'attic', title: 'Residential Attic Project', description: 'Professional attic insulation installation in progress', date: '2024-08-30' },
-      { src: 'assets/images/20240830_124717.jpg', category: 'residential', type: 'attic', title: 'Attic Spray Foam Coverage', description: 'Complete attic coverage with closed-cell spray foam', date: '2024-08-30' },
+      { src: 'assets/images/20240830_081517.jpg', category: 'residential', type: 'crawlspace', title: 'Melbourne Crawl Space Work', description: 'Crawl space preparation and spray foam application', date: '2024-08-30' },
+      { src: 'assets/images/20240830_081519.jpg', category: 'residential', type: 'crawlspace', title: 'Crawl Space Insulation', description: 'Professional crawl space spray foam installation', date: '2024-08-30' },
+      { src: 'assets/images/20240830_081526.jpg', category: 'residential', type: 'crawlspace', title: 'Crawl Space Treatment', description: 'Complete crawl space insulation and sealing work', date: '2024-08-30' },
+      { src: 'assets/images/20240830_124715.jpg', category: 'residential', type: 'attic', title: 'Residential Attic Service', description: 'Spray foam insulation installation in home attic', date: '2024-08-30' },
+      { src: 'assets/images/20240830_124717.jpg', category: 'residential', type: 'attic', title: 'Attic Foam Application', description: 'Professional spray foam coverage in attic area', date: '2024-08-30' },
 
       // September 2024 Projects
-      { src: 'assets/images/20240905_091406.jpg', category: 'residential', type: 'attic', title: 'Melbourne Home Attic Project', description: 'Energy-efficient attic insulation in Melbourne residential home', date: '2024-09-05' },
-      { src: 'assets/images/20240905_091428.jpg', category: 'residential', type: 'attic', title: 'Professional Spray Foam Coverage', description: 'Complete coverage spray foam insulation application', date: '2024-09-05' },
-      { src: 'assets/images/20240905_091454.jpg', category: 'residential', type: 'attic', title: 'Attic Insulation Installation', description: 'Professional installation of spray foam insulation in attic space', date: '2024-09-05' },
-      { src: 'assets/images/20240905_091501.jpg', category: 'residential', type: 'attic', title: 'Residential Energy Efficiency', description: 'Home energy efficiency improvement with spray foam', date: '2024-09-05' },
-      { src: 'assets/images/20240905_091512.jpg', category: 'residential', type: 'attic', title: 'Attic Spray Foam Project', description: 'Detailed attic spray foam insulation work', date: '2024-09-05' },
+      { src: 'assets/images/20240905_091406.jpg', category: 'residential', type: 'attic', title: 'Melbourne Attic Installation', description: 'Spray foam insulation work in Melbourne home attic', date: '2024-09-05' },
+      { src: 'assets/images/20240905_091428.jpg', category: 'residential', type: 'attic', title: 'Attic Foam Coverage', description: 'Professional spray foam application in attic space', date: '2024-09-05' },
+      { src: 'assets/images/20240905_091454.jpg', category: 'residential', type: 'attic', title: 'Attic Insulation Process', description: 'Spray foam installation work in residential attic', date: '2024-09-05' },
+      { src: 'assets/images/20240905_091501.jpg', category: 'residential', type: 'attic', title: 'Home Attic Project', description: 'Professional attic insulation installation service', date: '2024-09-05' },
+      { src: 'assets/images/20240905_091512.jpg', category: 'residential', type: 'attic', title: 'Attic Spray Foam Work', description: 'Detailed spray foam application in attic area', date: '2024-09-05' },
 
-      { src: 'assets/images/20240910_143434.jpg', category: 'commercial', type: 'warehouse', title: 'Commercial Warehouse - Cocoa', description: 'Large-scale commercial spray foam project in Cocoa warehouse', date: '2024-09-10' },
-      { src: 'assets/images/20240910_143537.jpg', category: 'commercial', type: 'warehouse', title: 'Industrial Insulation Project', description: 'Industrial building spray foam application for energy savings', date: '2024-09-10' },
-      { src: 'assets/images/20240910_153843.jpg', category: 'commercial', type: 'building', title: 'Commercial Building Insulation', description: 'Professional commercial spray foam insulation installation', date: '2024-09-10' },
-      { src: 'assets/images/20240910_153845.jpg', category: 'commercial', type: 'building', title: 'Commercial Spray Foam Application', description: 'Large-scale spray foam application for commercial property', date: '2024-09-10' },
-      { src: 'assets/images/20240910_153854.jpg', category: 'commercial', type: 'building', title: 'Commercial Energy Upgrade', description: 'Commercial building energy efficiency improvement project', date: '2024-09-10' },
+      { src: 'assets/images/20240910_143434.jpg', category: 'commercial', type: 'warehouse', title: 'Cocoa Warehouse Project', description: 'Commercial spray foam insulation in warehouse facility', date: '2024-09-10' },
+      { src: 'assets/images/20240910_143537.jpg', category: 'commercial', type: 'warehouse', title: 'Warehouse Insulation Work', description: 'Large-scale spray foam application in industrial building', date: '2024-09-10' },
+      { src: 'assets/images/20240910_153843.jpg', category: 'commercial', type: 'building', title: 'Commercial Building Project', description: 'Professional spray foam installation in commercial space', date: '2024-09-10' },
+      { src: 'assets/images/20240910_153845.jpg', category: 'commercial', type: 'building', title: 'Commercial Foam Application', description: 'Spray foam insulation work in commercial building', date: '2024-09-10' },
+      { src: 'assets/images/20240910_153854.jpg', category: 'commercial', type: 'building', title: 'Commercial Insulation Service', description: 'Professional insulation installation in commercial property', date: '2024-09-10' },
 
       // October 2024 Projects
-      { src: 'assets/images/20241017_104040.jpg', category: 'residential', type: 'attic', title: 'Cocoa Home Attic Insulation', description: 'Residential attic spray foam insulation in Cocoa home', date: '2024-10-17' },
-      { src: 'assets/images/20241017_104049.jpg', category: 'residential', type: 'attic', title: 'Attic Energy Efficiency Project', description: 'Energy-saving attic insulation installation project', date: '2024-10-17' },
-      { src: 'assets/images/20241017_104111.jpg', category: 'residential', type: 'attic', title: 'Professional Attic Insulation', description: 'Professional spray foam insulation in residential attic', date: '2024-10-17' },
-      { src: 'assets/images/20241017_104120.jpg', category: 'residential', type: 'attic', title: 'Residential Spray Foam Work', description: 'Detailed residential spray foam insulation work', date: '2024-10-17' },
+      { src: 'assets/images/20241017_104040.jpg', category: 'residential', type: 'attic', title: 'Cocoa Attic Project', description: 'Spray foam insulation installation in Cocoa home attic', date: '2024-10-17' },
+      { src: 'assets/images/20241017_104049.jpg', category: 'residential', type: 'attic', title: 'Attic Insulation Work', description: 'Professional attic spray foam application', date: '2024-10-17' },
+      { src: 'assets/images/20241017_104111.jpg', category: 'residential', type: 'attic', title: 'Residential Attic Service', description: 'Quality spray foam installation in home attic', date: '2024-10-17' },
+      { src: 'assets/images/20241017_104120.jpg', category: 'residential', type: 'attic', title: 'Attic Foam Installation', description: 'Detailed spray foam work in residential attic space', date: '2024-10-17' },
 
       // November 2024 Projects
-      { src: 'assets/images/20241104_082819.jpg', category: 'residential', type: 'crawlspace', title: 'Crawl Space Encapsulation - Titusville', description: 'Complete crawl space sealing and insulation in Titusville', date: '2024-11-04' },
-      { src: 'assets/images/20241104_104204.jpg', category: 'residential', type: 'attic', title: 'Residential Spray Foam Service', description: 'Professional residential insulation service installation', date: '2024-11-04' },
-      { src: 'assets/images/20241104_104206.jpg', category: 'residential', type: 'attic', title: 'Home Insulation Upgrade', description: 'Home insulation upgrade with spray foam technology', date: '2024-11-04' },
+      { src: 'assets/images/20241104_082819.jpg', category: 'residential', type: 'crawlspace', title: 'Titusville Crawl Space Work', description: 'Crawl space spray foam insulation and sealing', date: '2024-11-04' },
+      { src: 'assets/images/20241104_104204.jpg', category: 'residential', type: 'attic', title: 'Home Attic Installation', description: 'Professional spray foam application in residential attic', date: '2024-11-04' },
+      { src: 'assets/images/20241104_104206.jpg', category: 'residential', type: 'attic', title: 'Attic Insulation Service', description: 'Quality attic insulation work with spray foam', date: '2024-11-04' },
 
-      { src: 'assets/images/20241112_171534.jpg', category: 'commercial', type: 'building', title: 'Commercial Building Project', description: 'Commercial spray foam insulation project completion', date: '2024-11-12' },
-      { src: 'assets/images/20241112_171551.jpg', category: 'commercial', type: 'building', title: 'Commercial Insulation Work', description: 'Professional commercial insulation installation', date: '2024-11-12' },
+      { src: 'assets/images/20241112_171534.jpg', category: 'commercial', type: 'building', title: 'Commercial Building Work', description: 'Spray foam insulation in commercial building space', date: '2024-11-12' },
+      { src: 'assets/images/20241112_171551.jpg', category: 'commercial', type: 'building', title: 'Commercial Insulation Project', description: 'Professional commercial spray foam installation', date: '2024-11-12' },
 
-      { src: 'assets/images/20241118_104157.jpg', category: 'residential', type: 'attic', title: 'Attic Insulation Work - Orlando', description: 'Detailed attic spray foam application in Orlando home', date: '2024-11-18' },
-      { src: 'assets/images/20241118_104208.jpg', category: 'residential', type: 'attic', title: 'Professional Attic Service', description: 'Professional attic insulation service completion', date: '2024-11-18' },
+      { src: 'assets/images/20241118_104157.jpg', category: 'residential', type: 'attic', title: 'Orlando Attic Project', description: 'Spray foam insulation work in Orlando home attic', date: '2024-11-18' },
+      { src: 'assets/images/20241118_104208.jpg', category: 'residential', type: 'attic', title: 'Attic Installation Service', description: 'Professional attic spray foam installation work', date: '2024-11-18' },
 
-      { src: 'assets/images/20241119_141629.jpg', category: 'residential', type: 'attic', title: 'Titusville Home Insulation', description: 'Residential attic insulation project in Titusville', date: '2024-11-19' },
-      { src: 'assets/images/20241119_141635.jpg', category: 'residential', type: 'attic', title: 'Home Energy Improvement', description: 'Home energy improvement with spray foam insulation', date: '2024-11-19' },
+      { src: 'assets/images/20241119_141629.jpg', category: 'residential', type: 'attic', title: 'Titusville Attic Work', description: 'Spray foam insulation installation in Titusville home', date: '2024-11-19' },
+      { src: 'assets/images/20241119_141635.jpg', category: 'residential', type: 'attic', title: 'Home Attic Insulation', description: 'Quality attic insulation work with spray foam', date: '2024-11-19' },
 
-      { src: 'assets/images/20241120_080422.jpg', category: 'residential', type: 'crawlspace', title: 'Crawl Space Project - Melbourne', description: 'Moisture control and insulation in Melbourne crawl space', date: '2024-11-20' },
-      { src: 'assets/images/20241120_080424.jpg', category: 'residential', type: 'crawlspace', title: 'Crawl Space Moisture Control', description: 'Professional crawl space moisture control and sealing', date: '2024-11-20' },
+      { src: 'assets/images/20241120_080422.jpg', category: 'residential', type: 'crawlspace', title: 'Melbourne Crawl Space Project', description: 'Crawl space spray foam insulation work in Melbourne', date: '2024-11-20' },
+      { src: 'assets/images/20241120_080424.jpg', category: 'residential', type: 'crawlspace', title: 'Crawl Space Insulation', description: 'Professional crawl space spray foam application', date: '2024-11-20' },
 
-      { src: 'assets/images/20241122_162500.jpg', category: 'residential', type: 'attic', title: 'Attic Spray Foam Installation', description: 'Complete attic insulation coverage with spray foam', date: '2024-11-22' },
-      { src: 'assets/images/20241122_162502.jpg', category: 'residential', type: 'attic', title: 'Residential Attic Upgrade', description: 'Residential attic energy efficiency upgrade', date: '2024-11-22' },
+      { src: 'assets/images/20241122_162500.jpg', category: 'residential', type: 'attic', title: 'Attic Foam Installation', description: 'Spray foam insulation coverage in attic space', date: '2024-11-22' },
+      { src: 'assets/images/20241122_162502.jpg', category: 'residential', type: 'attic', title: 'Residential Attic Project', description: 'Professional attic insulation installation service', date: '2024-11-22' },
 
       // December 2024 Projects
-      { src: 'assets/images/20241202_091324.jpg', category: 'commercial', type: 'warehouse', title: 'Large Warehouse Project', description: 'Large commercial warehouse spray foam insulation project', date: '2024-12-02' },
-      { src: 'assets/images/20241202_091334.jpg', category: 'commercial', type: 'warehouse', title: 'Industrial Facility Insulation', description: 'Industrial facility spray foam insulation installation', date: '2024-12-02' },
+      { src: 'assets/images/20241202_091324.jpg', category: 'commercial', type: 'warehouse', title: 'Warehouse Insulation Project', description: 'Commercial warehouse spray foam installation work', date: '2024-12-02' },
+      { src: 'assets/images/20241202_091334.jpg', category: 'commercial', type: 'warehouse', title: 'Industrial Facility Work', description: 'Spray foam insulation in industrial warehouse space', date: '2024-12-02' },
 
-      { src: 'assets/images/20241203_120401.jpg', category: 'residential', type: 'attic', title: 'December Attic Project', description: 'Professional attic insulation project completion', date: '2024-12-03' },
-      { src: 'assets/images/20241203_120416.jpg', category: 'residential', type: 'attic', title: 'Winter Insulation Project', description: 'Winter season insulation improvement project', date: '2024-12-03' },
+      { src: 'assets/images/20241203_120401.jpg', category: 'residential', type: 'attic', title: 'December Attic Work', description: 'Residential attic spray foam installation project', date: '2024-12-03' },
+      { src: 'assets/images/20241203_120416.jpg', category: 'residential', type: 'attic', title: 'Home Attic Project', description: 'Professional attic insulation installation service', date: '2024-12-03' },
 
       // 2025 Projects
-      { src: 'assets/images/20250207_133556.jpg', category: 'residential', type: 'attic', title: 'February 2025 Attic Project', description: 'Latest residential attic insulation project', date: '2025-02-07' },
-      { src: 'assets/images/20250207_133602.jpg', category: 'residential', type: 'attic', title: 'Recent Home Upgrade', description: 'Recent home energy efficiency upgrade', date: '2025-02-07' },
+      { src: 'assets/images/20250207_133556.jpg', category: 'residential', type: 'attic', title: 'February Attic Project', description: 'Residential attic spray foam installation work', date: '2025-02-07' },
+      { src: 'assets/images/20250207_133602.jpg', category: 'residential', type: 'attic', title: 'Home Insulation Work', description: 'Professional home attic insulation service', date: '2025-02-07' },
 
-      { src: 'assets/images/20250215_130453.jpg', category: 'residential', type: 'attic', title: 'Valentine\'s Day Project', description: 'Home energy upgrade project for Valentine\'s Day', date: '2025-02-15' },
-      { src: 'assets/images/20250215_130505.jpg', category: 'residential', type: 'attic', title: 'February Home Improvement', description: 'February home energy improvement project', date: '2025-02-15' },
+      { src: 'assets/images/20250215_130453.jpg', category: 'residential', type: 'attic', title: 'Mid-February Attic Work', description: 'Spray foam insulation installation in home attic', date: '2025-02-15' },
+      { src: 'assets/images/20250215_130505.jpg', category: 'residential', type: 'attic', title: 'Residential Attic Service', description: 'Quality attic insulation work with spray foam', date: '2025-02-15' },
 
-      { src: 'assets/images/20250222_100359.jpg', category: 'residential', type: 'crawlspace', title: 'February Crawl Space Project', description: 'Professional crawl space encapsulation project', date: '2025-02-22' },
-      { src: 'assets/images/20250222_100402.jpg', category: 'residential', type: 'crawlspace', title: 'Crawl Space Sealing Work', description: 'Detailed crawl space sealing and insulation work', date: '2025-02-22' },
+      { src: 'assets/images/20250222_100359.jpg', category: 'residential', type: 'crawlspace', title: 'February Crawl Space Work', description: 'Crawl space spray foam insulation installation', date: '2025-02-22' },
+      { src: 'assets/images/20250222_100402.jpg', category: 'residential', type: 'crawlspace', title: 'Crawl Space Insulation', description: 'Professional crawl space spray foam work', date: '2025-02-22' },
 
-      { src: 'assets/images/20250228_150402.jpg', category: 'residential', type: 'attic', title: 'February Attic Service', description: 'Quality attic spray foam installation service', date: '2025-02-28' },
-      { src: 'assets/images/20250228_150409.jpg', category: 'residential', type: 'attic', title: 'Month-End Attic Project', description: 'Month-end residential attic insulation project', date: '2025-02-28' },
+      { src: 'assets/images/20250228_150402.jpg', category: 'residential', type: 'attic', title: 'February Attic Work', description: 'Residential attic spray foam installation', date: '2025-02-28' },
+      { src: 'assets/images/20250228_150409.jpg', category: 'residential', type: 'attic', title: 'Month-End Attic Project', description: 'Professional attic insulation installation work', date: '2025-02-28' },
 
-      { src: 'assets/images/20250307_090153.jpg', category: 'commercial', type: 'building', title: 'March Commercial Project', description: 'Professional commercial insulation project', date: '2025-03-07' },
-      { src: 'assets/images/20250307_090219.jpg', category: 'commercial', type: 'building', title: 'Spring Commercial Work', description: 'Spring season commercial insulation work', date: '2025-03-07' },
+      { src: 'assets/images/20250307_090153.jpg', category: 'commercial', type: 'building', title: 'March Commercial Work', description: 'Commercial building spray foam installation', date: '2025-03-07' },
+      { src: 'assets/images/20250307_090219.jpg', category: 'commercial', type: 'building', title: 'Commercial Building Project', description: 'Professional commercial spray foam work', date: '2025-03-07' },
 
-      { src: 'assets/images/20250318_155724.jpg', category: 'residential', type: 'attic', title: 'March Residential Upgrade', description: 'Home insulation improvement project in March', date: '2025-03-18' },
-      { src: 'assets/images/20250318_155800.jpg', category: 'residential', type: 'attic', title: 'Spring Home Project', description: 'Spring season home energy upgrade project', date: '2025-03-18' },
+      { src: 'assets/images/20250318_155724.jpg', category: 'residential', type: 'attic', title: 'March Home Attic Work', description: 'Spray foam insulation work in home attic', date: '2025-03-18' },
+      { src: 'assets/images/20250318_155800.jpg', category: 'residential', type: 'attic', title: 'Residential Attic Project', description: 'Professional residential attic insulation service', date: '2025-03-18' },
 
-      { src: 'assets/images/20250327_103016.jpg', category: 'residential', type: 'attic', title: 'Late March Attic Project', description: 'Recent residential attic insulation work', date: '2025-03-27' },
-      { src: 'assets/images/20250327_103021.jpg', category: 'residential', type: 'attic', title: 'Spring Insulation Work', description: 'Spring season insulation installation work', date: '2025-03-27' },
+      { src: 'assets/images/20250327_103016.jpg', category: 'residential', type: 'attic', title: 'Late March Attic Work', description: 'Residential attic spray foam installation', date: '2025-03-27' },
+      { src: 'assets/images/20250327_103021.jpg', category: 'residential', type: 'attic', title: 'Attic Insulation Service', description: 'Quality attic insulation work with spray foam', date: '2025-03-27' },
 
       { src: 'assets/images/20250331_095845.jpg', category: 'residential', type: 'crawlspace', title: 'March Crawl Space Work', description: 'Professional crawl space treatment and sealing', date: '2025-03-31' },
       { src: 'assets/images/20250331_095847.jpg', category: 'residential', type: 'crawlspace', title: 'End of March Project', description: 'End of March crawl space insulation project', date: '2025-03-31' },
@@ -408,10 +408,6 @@ class SprayFoamGallery {
         <div class="gallery-overlay">
           <h5>${this.escapeHtml(image.title)}</h5>
           <p class="small">${this.escapeHtml(image.description)}</p>
-          <div class="d-flex gap-2 justify-content-center">
-            <span class="badge bg-secondary">${image.category.charAt(0).toUpperCase() + image.category.slice(1)}</span>
-            <span class="badge bg-primary">${image.type.charAt(0).toUpperCase() + image.type.slice(1)}</span>
-          </div>
           <small class="mt-2 opacity-75">${new Date(image.date).toLocaleDateString()}</small>
         </div>
       </div>
