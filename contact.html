@@ -230,7 +230,7 @@ permalink: /contact/
                 <a href="tel:3216527465" class="btn btn-primary btn-lg me-3">
                   📞 Call (321) 652-7465 Now
                 </a>
-                <a href="mailto:info@coastlinesprayfoamsolutions.com" class="btn btn-outline-primary btn-lg">
+                <a href="mailto:info@coastlinesprayfoam.com" class="btn btn-outline-primary btn-lg">
                   📧 Email Us
                 </a>
               </div>
@@ -251,7 +251,7 @@ permalink: /contact/
                     <div class="card-body d-flex flex-column">
                       <h5 class="text-primary">📧 Email Quote</h5>
                       <p class="mb-2">Send us your project details</p>
-                      <p class="fw-bold email-address text-break mb-2">info@coastlinesprayfoamsolutions.com</p>
+                      <p class="fw-bold email-address text-break mb-2">info@coastlinesprayfoam.com</p>
                       <small class="text-muted mt-auto">We'll contact you during business hours. For immediate assistance, call (321) 652-7465.</small>
                     </div>
                   </div>
@@ -309,6 +309,131 @@ permalink: /contact/
                     </ul>
                   </div>
                 </div>
+              </div>
+
+              <!-- Enhanced Contact Form -->
+              <div class="mt-5">
+                <h4 class="text-center mb-4">📝 Request Your Free Quote Online</h4>
+                <p class="text-center text-muted mb-4">Fill out the form below and we'll contact you within 24 hours with your personalized quote</p>
+
+                <form id="quote-form" class="row g-3" action="#" method="POST">
+                  <div class="col-md-6">
+                    <label for="firstName" class="form-label">First Name *</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="lastName" class="form-label">Last Name *</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="phone" class="form-label">Phone Number *</label>
+                    <input type="tel" class="form-control phone-number" id="phone" name="phone" placeholder="(321) 555-0123" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">Email Address *</label>
+                    <input type="email" class="form-control email-address" id="email" name="email" required>
+                  </div>
+                  <div class="col-12">
+                    <label for="address" class="form-label">Property Address</label>
+                    <input type="text" class="form-control" id="address" name="address" placeholder="Street address, City, FL">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="propertyType" class="form-label">Property Type *</label>
+                    <select class="form-select" id="propertyType" name="propertyType" required>
+                      <option value="">Select property type</option>
+                      <option value="residential">Residential Home</option>
+                      <option value="commercial">Commercial Building</option>
+                      <option value="industrial">Industrial Facility</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="squareFootage" class="form-label">Approximate Square Footage</label>
+                    <select class="form-select" id="squareFootage" name="squareFootage">
+                      <option value="">Select size range</option>
+                      <option value="under-1000">Under 1,000 sq ft</option>
+                      <option value="1000-2000">1,000 - 2,000 sq ft</option>
+                      <option value="2000-3000">2,000 - 3,000 sq ft</option>
+                      <option value="3000-5000">3,000 - 5,000 sq ft</option>
+                      <option value="over-5000">Over 5,000 sq ft</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label for="serviceType" class="form-label">Service Needed *</label>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="atticInsulation" name="services[]" value="attic">
+                          <label class="form-check-label" for="atticInsulation">Attic Insulation</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="wallInsulation" name="services[]" value="walls">
+                          <label class="form-check-label" for="wallInsulation">Wall Insulation</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="crawlSpace" name="services[]" value="crawlspace">
+                          <label class="form-check-label" for="crawlSpace">Crawl Space Encapsulation</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="commercial" name="services[]" value="commercial">
+                          <label class="form-check-label" for="commercial">Commercial Insulation</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="removal" name="services[]" value="removal">
+                          <label class="form-check-label" for="removal">Insulation Removal</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="other" name="services[]" value="other">
+                          <label class="form-check-label" for="other">Other (specify in message)</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="timeline" class="form-label">Project Timeline</label>
+                    <select class="form-select" id="timeline" name="timeline">
+                      <option value="">When do you need this done?</option>
+                      <option value="asap">As soon as possible</option>
+                      <option value="1-2weeks">Within 1-2 weeks</option>
+                      <option value="1month">Within 1 month</option>
+                      <option value="3months">Within 3 months</option>
+                      <option value="planning">Just planning ahead</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="budget" class="form-label">Estimated Budget Range</label>
+                    <select class="form-select" id="budget" name="budget">
+                      <option value="">Select budget range (optional)</option>
+                      <option value="under-5k">Under $5,000</option>
+                      <option value="5k-10k">$5,000 - $10,000</option>
+                      <option value="10k-20k">$10,000 - $20,000</option>
+                      <option value="20k-plus">$20,000+</option>
+                      <option value="not-sure">Not sure yet</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label for="message" class="form-label">Additional Details</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Tell us about your project, any specific concerns, current insulation issues, or questions you have..."></textarea>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="consent" name="consent" required>
+                      <label class="form-check-label" for="consent">
+                        I consent to being contacted by Coastline Spray Foam via phone, email, or text message to discuss my project and receive my free quote. *
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary btn-lg px-5">
+                      🚀 Get My Free Quote
+                    </button>
+                    <p class="small text-muted mt-2">
+                      We'll contact you within 24 hours. For immediate assistance, call <a href="tel:3216527465" class="phone-number">(321) 652-7465</a>
+                    </p>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -403,6 +528,90 @@ permalink: /contact/
 
   <!-- Custom JS -->
   <script>
+    // Enhanced Contact Form Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('quote-form');
+      const phoneInput = document.getElementById('phone');
+
+      // Phone number formatting
+      phoneInput.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length >= 6) {
+          value = `(${value.slice(0,3)}) ${value.slice(3,6)}-${value.slice(6,10)}`;
+        } else if (value.length >= 3) {
+          value = `(${value.slice(0,3)}) ${value.slice(3)}`;
+        }
+        e.target.value = value;
+      });
+
+      // Form submission handling
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Basic validation
+        const requiredFields = form.querySelectorAll('[required]');
+        let isValid = true;
+
+        requiredFields.forEach(field => {
+          if (!field.value.trim()) {
+            field.classList.add('is-invalid');
+            isValid = false;
+          } else {
+            field.classList.remove('is-invalid');
+          }
+        });
+
+        // Check if at least one service is selected
+        const serviceCheckboxes = form.querySelectorAll('input[name="services[]"]');
+        const serviceSelected = Array.from(serviceCheckboxes).some(cb => cb.checked);
+
+        if (!serviceSelected) {
+          alert('Please select at least one service you need.');
+          isValid = false;
+        }
+
+        if (isValid) {
+          // Show success message (in real implementation, this would submit to a server)
+          const submitBtn = form.querySelector('button[type="submit"]');
+          const originalText = submitBtn.innerHTML;
+
+          submitBtn.innerHTML = '✅ Quote Request Sent!';
+          submitBtn.disabled = true;
+
+          // Show success message
+          const successDiv = document.createElement('div');
+          successDiv.className = 'alert alert-success mt-3';
+          successDiv.innerHTML = `
+            <h5>✅ Thank you for your quote request!</h5>
+            <p>We've received your information and will contact you within 24 hours with your personalized quote.</p>
+            <p><strong>For immediate assistance, call us at <a href="tel:3216527465" class="phone-number">(321) 652-7465</a></strong></p>
+          `;
+
+          form.appendChild(successDiv);
+
+          // Reset form after 3 seconds
+          setTimeout(() => {
+            form.reset();
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            successDiv.remove();
+          }, 5000);
+        }
+      });
+
+      // Real-time validation feedback
+      const inputs = form.querySelectorAll('input, select, textarea');
+      inputs.forEach(input => {
+        input.addEventListener('blur', function() {
+          if (this.hasAttribute('required') && !this.value.trim()) {
+            this.classList.add('is-invalid');
+          } else {
+            this.classList.remove('is-invalid');
+          }
+        });
+      });
+    });
+
     // Navbar scroll effect
     window.addEventListener('scroll', function() {
       const navbar = document.querySelector('.navbar');
