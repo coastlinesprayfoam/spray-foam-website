@@ -1,13 +1,20 @@
 # Cloudflare Pages Redirects
-# SEO redirects to canonical domain
+# Primary Domain: coastlinesprayfoam.com
+# Secondary Domain: coastlinesprayfoamsolutions.com (redirects to primary)
 
-# Redirect www to non-www
+# Redirect secondary domain to primary domain (all variations)
+https://coastlinesprayfoamsolutions.com/* https://coastlinesprayfoam.com/:splat 301!
+https://www.coastlinesprayfoamsolutions.com/* https://coastlinesprayfoam.com/:splat 301!
+http://coastlinesprayfoamsolutions.com/* https://coastlinesprayfoam.com/:splat 301!
+http://www.coastlinesprayfoamsolutions.com/* https://coastlinesprayfoam.com/:splat 301!
+
+# Redirect www to non-www for primary domain
 https://www.coastlinesprayfoam.com/* https://coastlinesprayfoam.com/:splat 301!
 
-# Redirect HTTP to HTTPS
+# Force HTTPS for primary domain
 http://coastlinesprayfoam.com/* https://coastlinesprayfoam.com/:splat 301!
 http://www.coastlinesprayfoam.com/* https://coastlinesprayfoam.com/:splat 301!
 
-# Legacy redirects (if needed)
-/home /
-/index.html /
+# Internal page redirects
+/home / 301
+/index.html / 301
