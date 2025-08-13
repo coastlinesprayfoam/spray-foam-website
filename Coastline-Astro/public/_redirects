@@ -1,6 +1,0 @@
-# Legacy HTML to clean routes (add more as needed)
-/about.html /about/ 301
-/services.html /services/ 301
-/contact.html /contact/ 301
-/faq.html /faq/ 301
-/index.html / 301
