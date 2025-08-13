@@ -335,6 +335,17 @@ p {
   color: var(--primary-light) !important;
 }
 
+/* Logo image inside navbar brand */
+.navbar-brand .logo-img {
+  height: 44px;
+  width: auto;
+  max-width: 200px;
+  display: block;
+}
+@media (max-width: 576px) {
+  .navbar-brand .logo-img { height: 40px; }
+}
+
 .navbar-nav {
   gap: 0.5rem;
 }

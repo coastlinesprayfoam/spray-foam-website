@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../components/layout/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+const services = await getCollection('services');
+---
+<BaseLayout title="Services" description="Insulation service offerings">
+  <section class="max-w-7xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold text-brand-primary">Services</h1>
+    <p class="mt-2 text-slate-600 max-w-2xl">An overview of core insulation and building performance offerings. Detailed descriptions coming soon.</p>
+    <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {services.map(s => (
+        <div class="p-4 border rounded bg-white" style={{ order: s.data.order ?? 0 }}>
+          <h2 class="font-semibold text-lg">{s.data.title}</h2>
+          {s.data.summary && <p class="mt-2 text-sm leading-relaxed">{s.data.summary}</p>}
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
