@@ -25,4 +25,8 @@ http://www.coastlinesprayfoam.com/* https://coastlinesprayfoam.com/:splat 301!
 /contact.html /contact/ 301!
 /warranty.html /warranty/ 301!
 /blog-post.html /blog-post.html 301!
+# Back-compat: flat routes that exist as .html in the build
+/privacy-policy /privacy-policy.html 301!
+/terms-of-service /terms-of-service.html 301!
+/gallery /gallery.html 301!
 
