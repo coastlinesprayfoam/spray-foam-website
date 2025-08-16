@@ -43,7 +43,7 @@ function createNavigation(currentPage = '') {
                 <li><a class="dropdown-item ${currentPage === 'hurricane' ? 'active' : ''}" href="hurricane-preparation.html">🌪️ Hurricane Prep</a></li>
                 <li><a class="dropdown-item ${currentPage === 'florida-guide' ? 'active' : ''}" href="new-to-florida-guide.html">🌴 New to Florida</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="contact.html">📞 Contact Us</a></li>
+                <li><a class="dropdown-item" href="mailto:info@coastlinesprayfoam.com">📞 Contact Us</a></li>
               </ul>
             </li>
             <li class="nav-item ms-2">

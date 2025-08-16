@@ -362,7 +362,7 @@ p {
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--primary-color) !important;
+  color: var(--secondary-color) !important; /* Use brand accent for active/hover */
   background-color: var(--bg-tertiary);
 }
 
@@ -393,6 +393,26 @@ p {
 .phone-nav-link:hover {
   color: var(--secondary-light) !important;
   background-color: var(--bg-tertiary) !important;
+}
+
+/* Call-to-action (primary) */
+.btn-cta {
+  background: linear-gradient(90deg, var(--secondary-color), var(--secondary-light));
+  color: var(--white) !important;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Outline buttons using brand on light backgrounds */
+.btn-outline-light {
+  color: var(--white) !important;
+  border-color: rgba(255,255,255,0.15) !important;
+}
+
+/* Card title color consistent with primary brand */
+.card-title {
+  color: var(--primary-color) !important;
 }
 
 /* Modern Button System */
@@ -1182,7 +1202,7 @@ body {
 .card-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--primary-color); /* consistent heading color on cards */
   margin-bottom: 1rem;
 }
 
