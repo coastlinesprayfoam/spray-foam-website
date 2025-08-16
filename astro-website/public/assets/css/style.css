@@ -66,7 +66,60 @@
   --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Dark Mode Support */
+/* Dark Theme with Glass Effects Variables */
+:root {
+  /* Dark Theme Glass Colors */
+  --glass-bg: rgba(0, 0, 0, 0.85);
+  --glass-bg-light: rgba(0, 0, 0, 0.7);
+  --glass-bg-lighter: rgba(0, 0, 0, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-border-light: rgba(255, 255, 255, 0.2);
+  --glass-text: rgba(255, 255, 255, 0.95);
+  --glass-text-muted: rgba(255, 255, 255, 0.7);
+  --glass-text-dim: rgba(255, 255, 255, 0.5);
+
+  /* Glassmorphism Effects */
+  --glass-blur: blur(20px);
+  --glass-blur-light: blur(10px);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --glass-shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.6);
+  --glass-inset: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  /* Background Colors - Dark Theme */
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0a;
+  --bg-tertiary: #111111;
+  --bg-card: var(--glass-bg);
+  --bg-overlay: var(--glass-bg-light);
+
+  /* Text Colors - Dark Theme */
+  --text-primary: var(--glass-text);
+  --text-secondary: var(--glass-text-muted);
+  --text-muted: var(--glass-text-dim);
+  --text-light: var(--glass-text-dim);
+  --text-inverse: var(--black);
+
+  /* Border Colors - Dark Theme */
+  --border-color: var(--glass-border);
+  --border-light: var(--glass-border);
+  --border-dark: var(--glass-border-light);
+
+  /* Shadow Colors - Dark Theme */
+  --shadow-color: rgba(0, 0, 0, 0.6);
+  --shadow-color-light: rgba(0, 0, 0, 0.4);
+
+  /* Enhanced shadows for dark theme */
+  --shadow-sm: 0 2px 8px var(--shadow-color-light);
+  --shadow: 0 8px 16px var(--shadow-color), 0 4px 8px var(--shadow-color-light);
+  --shadow-md: 0 16px 32px var(--shadow-color), 0 8px 16px var(--shadow-color-light);
+  --shadow-lg: 0 24px 48px var(--shadow-color), 0 12px 24px var(--shadow-color-light);
+  --shadow-xl: 0 32px 64px rgba(0, 0, 0, 0.8);
+}
+
+/* Auto Dark Mode Support */
 @media (prefers-color-scheme: dark) {
   :root {
     /* Dark Mode Theme Colors */
@@ -134,6 +187,29 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: var(--transition);
+}
+
+/* Dark Theme Body Background */
+[data-theme="dark"] body {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+  background-attachment: fixed;
+  color: var(--glass-text);
+}
+
+[data-theme="dark"] body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
   transition: background-color var(--transition), color var(--transition);
 }
 
@@ -215,6 +291,32 @@ p {
   border-bottom: 1px solid var(--border-color);
 }
 
+/* Dark Theme Navigation */
+[data-theme="dark"] .navbar {
+  background: var(--glass-bg-light) !important;
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+[data-theme="dark"] .navbar.scrolled {
+  background: var(--glass-bg) !important;
+  box-shadow: var(--glass-shadow-lg);
+}
+
+[data-theme="dark"] .navbar-brand {
+  color: var(--glass-text) !important;
+}
+
+[data-theme="dark"] .nav-link {
+  color: var(--glass-text-muted) !important;
+}
+
+[data-theme="dark"] .nav-link:hover {
+  color: var(--glass-text) !important;
+}
+
 .navbar.scrolled {
   padding: 0.75rem 0;
   background: var(--bg-overlay) !important;
@@ -231,6 +333,17 @@ p {
 
 .navbar-brand:hover {
   color: var(--primary-light) !important;
+}
+
+/* Logo image inside navbar brand */
+.navbar-brand .logo-img {
+  height: 44px;
+  width: auto;
+  max-width: 200px;
+  display: block;
+}
+@media (max-width: 576px) {
+  .navbar-brand .logo-img { height: 40px; }
 }
 
 .navbar-nav {
@@ -268,6 +381,18 @@ p {
 .nav-link:hover::after,
 .nav-link.active::after {
   width: 80%;
+}
+
+/* Phone navigation link styling */
+.phone-nav-link {
+  font-weight: 600 !important;
+  color: var(--secondary-color) !important;
+  white-space: nowrap !important;
+}
+
+.phone-nav-link:hover {
+  color: var(--secondary-light) !important;
+  background-color: var(--bg-tertiary) !important;
 }
 
 /* Modern Button System */
@@ -413,25 +538,57 @@ a[href^="tel:"] {
   align-items: center;
 }
 
-/* Prevent email addresses from breaking across lines */
+/* Email address styling with proper spacing */
 a[href^="mailto:"],
 .email-address {
-  white-space: nowrap !important;
-  word-break: keep-all !important;
-  overflow-wrap: normal !important;
+  word-break: break-all !important;
+  overflow-wrap: break-word !important;
   -webkit-hyphens: none !important;
   -moz-hyphens: none !important;
   -ms-hyphens: none !important;
   hyphens: none !important;
   display: inline-block !important;
   max-width: 100% !important;
-  overflow: visible !important;
+  line-height: 1.4 !important;
+  padding: 0.25rem 0 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Ensure email containers have proper spacing */
+.email-address {
+  min-height: 2.5rem;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Contact card spacing fixes */
+.card-body {
+  padding: 1.5rem !important;
+  min-height: 200px;
+}
+
+.card-body.d-flex.flex-column {
+  justify-content: space-between;
+}
+
+/* Contact information section spacing */
+.col-md-6.mb-4 {
+  margin-bottom: 2rem !important;
+}
+
+.d-flex .flex-grow-1 {
+  min-width: 0; /* Allows flex item to shrink */
+  word-wrap: break-word;
 }
 
 /* Prevent phone numbers from breaking across lines */
 a[href^="tel:"],
 .phone-number,
-.phone-button {
+.phone-button,
+.phone-nav-link,
+*[href*="tel:"],
+*:contains("(321)"),
+*:contains("652-7465") {
   white-space: nowrap !important;
   word-break: keep-all !important;
   overflow-wrap: normal !important;
@@ -442,6 +599,7 @@ a[href^="tel:"],
   display: inline-block !important;
   max-width: 100% !important;
   overflow: visible !important;
+  text-overflow: ellipsis !important;
 }
 
 /* Prevent word hyphenation across the entire website */
@@ -452,22 +610,55 @@ a[href^="tel:"],
   -moz-hyphens: none !important;
   -ms-hyphens: none !important;
   hyphens: none !important;
-  word-break: normal !important;
-  overflow-wrap: break-word;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  word-wrap: normal !important;
 }
 
 /* Additional hyphenation prevention for specific elements */
-p, h1, h2, h3, h4, h5, h6, span, div, a, li, td, th {
+p, h1, h2, h3, h4, h5, h6, span, div, a, li, td, th, strong, em, b, i {
   -webkit-hyphens: none !important;
   -moz-hyphens: none !important;
   -ms-hyphens: none !important;
   hyphens: none !important;
-  word-break: normal !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  word-wrap: normal !important;
 }
 
 /* Prevent automatic hyphenation in text content */
 body {
-  /* Removed unsupported webkit hyphenation properties for better browser compatibility */
+  -webkit-hyphens: none !important;
+  -moz-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+}
+
+/* Prevent hyphenation of specific business words and phrases */
+.no-hyphen,
+*:contains("Several"),
+*:contains("Professional"),
+*:contains("Coastline"),
+*:contains("Florida"),
+*:contains("Orlando"),
+*:contains("Melbourne"),
+*:contains("Titusville"),
+*:contains("Licensed"),
+*:contains("Insured"),
+*:contains("Emergency"),
+*:contains("Residential"),
+*:contains("Commercial"),
+*:contains("Installation"),
+*:contains("Insulation"),
+*:contains("Consultation") {
+  -webkit-hyphens: none !important;
+  -moz-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
+  word-break: keep-all !important;
+  white-space: nowrap;
 }
 
 /* Specific elements that should never be hyphenated */
@@ -939,6 +1130,35 @@ body {
   color: var(--text-primary);
 }
 
+/* Dark Theme Card Effects */
+[data-theme="dark"] .card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow), var(--glass-inset);
+  color: var(--glass-text);
+}
+
+[data-theme="dark"] .card:hover {
+  background: var(--glass-bg-light);
+  border-color: var(--glass-border-light);
+  box-shadow: var(--glass-shadow-lg), var(--glass-inset);
+  transform: translateY(-2px);
+}
+
+[data-theme="dark"] .card-body {
+  color: var(--glass-text);
+}
+
+[data-theme="dark"] .card-title {
+  color: var(--glass-text);
+}
+
+[data-theme="dark"] .card-text {
+  color: var(--glass-text-muted);
+}
+
 .card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-xl);
@@ -1368,10 +1588,13 @@ main {
 
 .card-body {
   padding: 1.5rem;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  -webkit-hyphens: auto; /* Safari on iOS 4.2+ support */
-  hyphens: auto;
+  word-wrap: normal;
+  overflow-wrap: normal;
+  -webkit-hyphens: none !important;
+  -moz-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
+  word-break: keep-all !important;
 }
 
 /* Fix button alignment and prevent wrapping issues */
@@ -1404,16 +1627,24 @@ main {
 
 /* Fix text overflow and alignment */
 h1, h2, h3, h4, h5, h6 {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  -webkit-hyphens: auto;
-  hyphens: auto;
+  word-wrap: normal;
+  overflow-wrap: normal;
+  -webkit-hyphens: none !important;
+  -moz-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
+  word-break: keep-all !important;
   max-width: 100%;
 }
 
 p, li, span {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  word-wrap: normal;
+  overflow-wrap: normal;
+  -webkit-hyphens: none !important;
+  -moz-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
+  word-break: keep-all !important;
   max-width: 100%;
 }
 
@@ -1576,12 +1807,18 @@ img {
     background: var(--bg-tertiary);
   }
 
-  .navbar .btn-cta {
-    margin-top: 1rem;
-    width: 100%;
-    max-width: 250px;
-    margin-left: auto;
-    margin-right: auto;
+  .phone-nav-link {
+    margin-top: 0.5rem;
+    text-align: center;
+    font-weight: 700 !important;
+    color: var(--secondary-color) !important;
+    background-color: var(--bg-tertiary);
+    border-radius: var(--radius);
+  }
+
+  .phone-nav-link:hover {
+    background-color: var(--secondary-color) !important;
+    color: white !important;
   }
 }
 
@@ -1677,4 +1914,124 @@ img {
 .btn-outline-primary:hover {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
+}
+
+/* Enhanced Mobile-First Optimizations */
+@media (max-width: 768px) {
+  /* Mobile-First Call Buttons */
+  .phone-button,
+  .btn-cta {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    border: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+    transition: all 0.3s ease;
+    width: 100%;
+    margin: 0.5rem 0;
+    text-decoration: none;
+    color: white;
+  }
+
+  .phone-button:hover,
+  .btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+    color: white;
+  }
+
+  /* Mobile Navigation */
+  .navbar-nav .nav-link {
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  /* Mobile Forms */
+  .form-control {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  /* Mobile Hero */
+  .hero h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .hero .lead {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Conversion Optimization */
+.sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #28a745, #20c997);
+  padding: 1rem;
+  z-index: 1000;
+  box-shadow: 0 -4px 15px rgba(0,0,0,0.2);
+  display: none;
+}
+
+.sticky-cta.show {
+  display: block;
+}
+
+.sticky-cta .btn {
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 1rem;
+  border: none;
+  background: white;
+  color: #28a745;
+  border-radius: 50px;
+}
+
+/* Trust Signals */
+.trust-badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.trust-badge {
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #28a745;
+  border: 2px solid #28a745;
+}
+
+/* Savings Calculator Styles */
+.savings-result-hidden {
+  display: none;
+}
+
+.savings-result-visible {
+  display: block;
+}
+
+/* Loading Indicator Styles */
+.loading-indicator-hidden {
+  display: none;
+}
+
+.loading-indicator-visible {
+  display: block;
 }

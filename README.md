@@ -68,21 +68,26 @@ A professional, modern website for Coastline Spray Foam - Florida's premier spra
    ```
 
 2. **Serve locally**
-   ```bash
-   # Using Python
-   python -m http.server 8000
-   
-   # Using Node.js
-   npx serve .
-   
-   # Using PHP
-   php -S localhost:8000
-   ```
+    For a stable, exact match of the live site we recommend serving the repository root static files.
 
-3. **Open in browser**
-   ```
-   http://localhost:8000
-   ```
+    See `SERVE.md` for one-click PowerShell helper and alternative commands.
+
+    Quick examples:
+    ```pwsh
+    # Using included helper (PowerShell)
+    ./serve-local.ps1
+
+    # Or manually with Python
+    python -m http.server 4322
+
+    # Or with Node (if you prefer)
+    npx serve . -l 4322
+    ```
+
+ 3. **Open in browser**
+    ```
+    http://localhost:4322
+    ```
 
 ## 🎨 Design System
 
@@ -169,7 +174,26 @@ The website is prepared for:
 2. Configure DNS settings
 3. Enable HTTPS in GitHub Pages settings
 
-## 📝 License
+## � Deploy & redirects (recommended)
+
+This repository prefers canonical, folder-style URLs (for example `/service-areas/` and `/blog/`) because they are cleaner and play nicely with modern static-site generators and CDNs.
+
+Compatibility approach used here:
+- Server-side redirects: We add platform `_redirects` rules in `astro-website/public/_redirects` so Cloudflare Pages / Netlify will issue 301 redirects from legacy flat `.html` links to the canonical folder routes.
+- Static fallback pages: For maximum compatibility (older links, crawlers, or edge cases), lightweight static redirect pages like `astro-website/public/blog.html` and `astro-website/public/service-areas.html` are also included. These are copied into `dist/` and served directly if the platform doesn't use `_redirects`.
+
+Publish steps (stable static pages):
+```pwsh
+cd astro-website
+npm ci
+npm run build
+# Upload contents of astro-website/dist to your static host (Netlify, Cloudflare Pages, S3+CloudFront, etc.)
+```
+
+If you prefer to rely only on server redirects, remove the corresponding `public/*.html` redirect pages and keep `_redirects` updated. I recommend keeping both for safety unless you control all inbound links and redirects at the CDN level.
+
+
+## �📝 License
 
 This website is proprietary to Coastline Spray Foam. All rights reserved.
 

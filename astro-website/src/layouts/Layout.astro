@@ -50,7 +50,10 @@ const { title, description = "Professional spray foam insulation services in Flo
   <link rel="canonical" href="https://coastlinesprayfoam.com/">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="../../assets/images/20240815_121229.jpg">
+  <link rel="icon" type="image/jpeg" href="/assets/images/20240815_121229.jpg">
+
+  <!-- Preload main hero / social image to improve LCP -->
+  <link rel="preload" href="/assets/images/20240815_121229.jpg" as="image" type="image/jpeg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -108,26 +111,27 @@ const { title, description = "Professional spray foam insulation services in Flo
 
   <!-- Custom JS -->
   <script>
-    // Navbar scroll effect
+    // Navbar scroll effect (guard nulls)
     window.addEventListener('scroll', function() {
       const navbar = document.querySelector('.navbar');
+      if (!navbar) return;
       if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
       }
-    });
+    }, { passive: true });
 
-    // Smooth scrolling for anchor links
+    // Smooth scrolling for anchor links (avoid using 'this')
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+  const el = /** @type {HTMLElement|null} */ (e.currentTarget);
+  const href = el ? el.getAttribute('href') : null;
+        if (!href) return;
+        const target = document.querySelector(href);
         if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
     });

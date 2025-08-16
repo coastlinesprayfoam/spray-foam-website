@@ -1,0 +1,197 @@
+/* Professional Unified Navigation System */
+/* Consistent across all pages - Cloudflare optimized */
+
+/* Base Navigation Styling */
+.navbar {
+  z-index: 1050;
+  background-color: rgba(0, 0, 0, 0.95) !important;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.98) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white !important;
+  text-decoration: none;
+}
+
+.navbar-brand:hover {
+  color: #ffc107 !important;
+}
+
+/* Navigation Links */
+.navbar-nav .nav-link {
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9) !important;
+  transition: all 0.3s ease;
+  border-radius: 0.25rem;
+  margin: 0 0.125rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-item .nav-link:hover {
+  color: #ffc107 !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.navbar-nav .nav-link.active {
+  color: #ffc107 !important;
+  font-weight: 600;
+  background-color: rgba(255, 193, 7, 0.1);
+}
+
+/* Call-to-Action Button */
+.btn-cta {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white !important;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-cta:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(40, 167, 69, 0.3);
+}
+
+/* Mobile Navigation */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.98);
+    border-radius: 0.75rem;
+    margin-top: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar-nav .nav-link {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: white !important;
+    margin: 0;
+    border-radius: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .navbar-nav .nav-link:last-child {
+    border-bottom: none;
+  }
+
+  .navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateX(5px);
+  }
+
+  .btn-cta {
+    margin-top: 1.5rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 1.25rem;
+  }
+
+  .navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+}
+
+/* Desktop Spacing */
+@media (min-width: 992px) {
+  .navbar-nav .nav-link {
+    margin: 0 0.25rem;
+  }
+
+  .btn-cta {
+    margin-left: 1.5rem;
+  }
+}
+
+/* Accessibility Improvements */
+.navbar-toggler:focus {
+  outline: 2px solid #ffc107;
+  outline-offset: 2px;
+}
+
+.nav-link:focus {
+  outline: 2px solid #ffc107;
+  outline-offset: 2px;
+}
+
+.btn-cta:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading Animation */
+.navbar {
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Professional Typography */
+.navbar-nav {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* High Performance Optimizations */
+.navbar * {
+  will-change: transform;
+}
+
+.navbar-nav .nav-link,
+.btn-cta {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Force hover states for dynamically generated content */
+#unified-nav .navbar-nav .nav-link:hover {
+  color: #ffc107 !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Ensure all navigation links have proper hover */
+.navbar .nav-link:hover,
+.navbar .navbar-nav .nav-link:hover,
+#unified-nav .nav-link:hover {
+  color: #ffc107 !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
