@@ -1,0 +1,10 @@
+# Root .gitignore for repository workspace
+# Ignore diagnostic captures and temporary files created during troubleshooting
+contact_*
+*.response
+dist-file-list.txt
+lighthouse-home.json
+
+# Node/Astro related ignores (minimal here; see astro-website/.gitignore for project-specific)
+node_modules/
+*.log
