@@ -1,6 +1,7 @@
 # Cloudflare Pages Configuration for Static Website
 name = "coastlinesprayfoam"
-compatibility_date = "2024-12-15"
+# Updated to force Pages to pick up a new build (ISO date)
+compatibility_date = "2025-08-16"
 
 # Static assets configuration
 [assets]
