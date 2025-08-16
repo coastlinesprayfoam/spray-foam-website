@@ -1,5 +1,5 @@
 HTTP/1.1 308 Permanent Redirect
-Date: Sat, 16 Aug 2025 14:51:17 GMT
+Date: Sat, 16 Aug 2025 14:52:17 GMT
 Content-Length: 0
 Connection: keep-alive
 Server: cloudflare
@@ -7,13 +7,13 @@ Cf-Cache-Status: DYNAMIC
 Location: /
 Access-Control-Allow-Origin: *
 Referrer-Policy: strict-origin-when-cross-origin
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=9eN6paom%2BFYvCbtr0T5YCFBy7QryYsNxzXLjFGAi3Q6WKHjG4fFtLx3E0nVEf03KKYtMCpjUHd9EKub%2FHn752RM0CGndNp7z80fDnBiftzj0j5wU0tu8XAdv0eSJFQaVtlpStAkuG7edplRLuqrM5%2FgXmMr%2B"}],"group":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=kaMbRTO5swsvtzGXNytM4NsUuwrnEPCliFYn69uVHgTebByeCh%2BB48F8uNowzwYinlBsMjqKGDtUXCsI%2BhEw7WGx%2FqYKvZZM1639201QfhlSdtQsVcrUe2a8zqNCtQysgl9dxV4K7v497W3OGn%2FNB5gBtlYn"}],"group":"cf-nel","max_age":604800}
 Nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Vary: Accept-Encoding
-CF-RAY: 9701bfb90e74a50f-MIA
+CF-RAY: 9701c1315f417b37-MIA
 
 HTTP/1.1 200 OK
-Date: Sat, 16 Aug 2025 14:51:17 GMT
+Date: Sat, 16 Aug 2025 14:52:17 GMT
 Content-Type: text/html; charset=utf-8
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -25,9 +25,9 @@ Cache-Control: public, max-age=0, must-revalidate
 Link: <assets/css/critical.css>; rel="preload"; as=style, <assets/css/style.css>; rel="preload"; as=style, <assets/js/gallery.js>; rel="modulepreload", <https://fonts.googleapis.com>; rel="preconnect"
 Referrer-Policy: strict-origin-when-cross-origin
 X-Content-Type-Options: nosniff
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=f375zMake%2BiyQig2UE4R7MWJp5DaHJGDl0HQ7lfprOah69F0WlQTQZYIYuqTVc1LyMoemIXFDjMmQxOxet%2FqdjxwcmBdtAAkFctgf4UQ2n8k6r1upeyKMm%2FRcgFdw7xnjfmT8itWF2q2ANhmvetKomJbYfLU"}],"group":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=THrQOmSMFUDEtO7hwIxdjDR7OHmat1Ky5ahhIb5P%2BYDAXXTq6CF%2B9TaNOU95cJBCC80m14YKq5z3wm8abbq9tQo6ZzQ6tdFxPqai6fk4Zwn5S60AsLaz%2FDIDmnFMTwdsRHK7r44gTASTU9g6O05dImMlG7jn"}],"group":"cf-nel","max_age":604800}
 Nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
-CF-RAY: 9701bfb97ecea50f-MIA
+CF-RAY: 9701c131c8287b37-MIA
 
 
 <!DOCTYPE html>
@@ -761,7 +761,7 @@ CF-RAY: 9701bfb97ecea50f-MIA
           <h5>Get In Touch</h5>
           <div class="mb-3">
             <strong><a href="tel:3216527465" class="phone-link phone-number">(321)&nbsp;652-7465</a></strong><br>
-            <a href="/cdn-cgi/l/email-protection#741d1a121b34171b150700181d1a11070406150d121b15195a171b19" class="email-address" aria-label="Send email to info@coastlinesprayfoam.com"><span class="__cf_email__" data-cfemail="0861666e67486b67697b7c6461666d7b787a69716e676965266b6765">[email&#160;protected]</span></a><br>
+            <a href="/cdn-cgi/l/email-protection#d5bcbbb3ba95b6bab4a6a1b9bcbbb0a6a5a7b4acb3bab4b8fbb6bab8" class="email-address" aria-label="Send email to info@coastlinesprayfoam.com"><span class="__cf_email__" data-cfemail="7f161119103f1c101e0c0b1316111a0c0f0d1e0619101e12511c1012">[email&#160;protected]</span></a><br>
             Serving All of Florida
           </div>
           <div>

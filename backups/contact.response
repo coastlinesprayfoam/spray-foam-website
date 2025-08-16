@@ -1,0 +1,29 @@
+HTTP/1.1 200 OK
+Date: Sat, 16 Aug 2025 14:52:17 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Cf-Cache-Status: DYNAMIC
+Server: cloudflare
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Cache-Control: public, max-age=0, must-revalidate
+Referrer-Policy: strict-origin-when-cross-origin
+X-Content-Type-Options: nosniff
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=owcvvsfKlbV%2FdHdD8kJVsguBj98iUlgry0IwsTphXEuUnz5cE1CoRut%2BioDAFetL78fF7z%2Fv%2F5kW7iO0sNzAEwKDjCSZTAmGa4ueQBJ%2BFI6hSWiJiLE2aHBt%2BkjoL9%2Bsz5QnbMV6EDznFDO79m5OBzc%2FhA8c"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+CF-RAY: 9701c12fe9ef9471-MIA
+
+<!DOCTYPE html>
+<!-- This file was renamed to avoid serving a legacy meta-refresh redirect that interferes with the built site.
+     Original content moved to contact/index.redirect.html.bak in the same directory as a safe backup. -->
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Legacy redirect disabled</title>
+</head>
+<body>
+  <p>This legacy redirect has been disabled in the repository to allow the built /contact/ page to be served from the Astro build output.</p>
+</body>
+</html>
