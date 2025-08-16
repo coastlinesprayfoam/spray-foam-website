@@ -33,9 +33,9 @@ function createUnifiedNavigation(currentPage = '') {
             <li class="nav-item">
               <a class="nav-link ${currentPage === 'blog' ? 'active' : ''}" href="blog.html">Blog</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link ${currentPage === 'contact' ? 'active' : ''}" href="mailto:info@coastlinesprayfoam.com">Contact</a>
-            </li>
+            </li> -->
           </ul>
           <ul class="navbar-nav">
             <li class="nav-item">
