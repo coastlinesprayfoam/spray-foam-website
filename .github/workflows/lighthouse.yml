@@ -1,0 +1,37 @@
+name: Lighthouse CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  lighthouse:
+    name: Run Lighthouse CI (build + autorun)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        working-directory: ./astro-website
+        run: npm ci
+
+      - name: Build site
+        working-directory: ./astro-website
+        run: npm run build --if-present
+
+      - name: Run Lighthouse CI (autorun)
+        working-directory: ./astro-website
+        env:
+          CI: true
+        run: |
+          # autorun will collect and upload reports to temporary-public-storage
+          npx -y @lhci/cli@0.8.x autorun --collect.numberOfRuns=1 --upload.target=temporary-public-storage
