@@ -1,13 +1,13 @@
 HTTP/1.1 308 Permanent Redirect
-Date: Sat, 16 Aug 2025 15:03:51 GMT
+Date: Sat, 16 Aug 2025 15:05:22 GMT
 Connection: keep-alive
 Cf-Cache-Status: DYNAMIC
 Server: cloudflare
 Location: /
 Access-Control-Allow-Origin: *
 Referrer-Policy: strict-origin-when-cross-origin
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=uAvHif6uhvqpLRH778%2FG%2FyRn0ELy2WtTxYgOkhNX3OhChDRLVaU7LjEm2gQkKCPidhDHMmQKIaSy9%2F2beOHR8lS8mR%2BzRn66s5F%2B4a6m%2FSy6C6VPHIA%2Bra%2BVbIkQtG9tinH4n84HOzKdsTqMCQN%2BKxaLalh4"}],"group":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=I4%2Fssq5cWLb9GqDfaS%2BMRx2EMRtvuRppc3nhl60npaFtyRKIx0xWMwhSbAwP6ZBYajuENWs3KHXr8rIXfwDctiQbI3eGNA0gbIBv73ZlTK6fCk5SpZoD3%2BM7%2BZOsMzcttMckVX0Gns2EpSlAHwAZNQE2EKXi"}],"group":"cf-nel","max_age":604800}
 Nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Vary: Accept-Encoding
-CF-RAY: 9701d221ec98e710-MIA
+CF-RAY: 9701d45c1e18a55a-MIA
 
